@@ -13,13 +13,15 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial,sans-serif;
 }
+
 
 body{
 background:#050505;
 color:white;
 }
+
 
 .container{
 max-width:700px;
@@ -28,59 +30,96 @@ padding:20px;
 }
 
 
+
 .logo{
 width:80%;
+max-width:400px;
 display:block;
 margin:20px auto;
 filter:drop-shadow(0 0 20px red);
 }
 
 
+
 h1{
 text-align:center;
 color:red;
+font-size:32px;
 margin:20px;
+text-shadow:0 0 15px red;
 }
+
 
 
 .card{
 
 background:#111;
-border:1px solid #600;
+border:1px solid #700;
 border-radius:20px;
 padding:25px;
 margin:20px 0;
+box-shadow:0 0 15px #300;
 
 }
+
 
 
 .card h2{
 
-color:#ff2020;
+color:#ff3030;
 
 }
+
 
 
 .price{
 
 font-size:30px;
+color:white;
 margin:15px 0;
 
 }
 
 
-button{
 
+.card p{
+
+color:#aaa;
+line-height:25px;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
 background:red;
 color:white;
 border:0;
-padding:15px 30px;
 border-radius:30px;
+font-size:16px;
 cursor:pointer;
 
 }
 
 
+
+.back{
+
+display:block;
+text-align:center;
+margin:30px;
+color:red;
+text-decoration:none;
+
+}
+
+
+
+/* POPUP PAYMENT */
 
 .popup{
 
@@ -90,9 +129,10 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#000000dd;
+background:rgba(0,0,0,.9);
 align-items:center;
 justify-content:center;
+z-index:999;
 
 }
 
@@ -100,6 +140,8 @@ justify-content:center;
 
 .popup-box{
 
+width:90%;
+max-width:400px;
 background:#111;
 border:2px solid red;
 border-radius:20px;
@@ -109,27 +151,79 @@ text-align:center;
 }
 
 
+
+.popup-box h2{
+
+color:red;
+margin-bottom:15px;
+
+}
+
+
+
 .qris{
 
 width:250px;
+margin:20px auto;
 
 }
+
+
+
+.popup-box p{
+
+color:#ddd;
+line-height:25px;
+
+}
+
+
+
+.contact{
+
+display:block;
+padding:15px;
+margin:10px 0;
+border-radius:30px;
+color:white;
+text-decoration:none;
+
+}
+
+
+
+.wa{
+
+background:#25D366;
+
+}
+
+
+
+.telegram{
+
+background:#0088cc;
+
+}
+
+
+
+.channel{
+
+background:#8000ff;
+
+}
+
 
 
 .close{
 
-margin-top:15px;
 background:#333;
-
-}
-
-
-.back{
-
-display:block;
-text-align:center;
-margin-top:30px;
-color:red;
+color:white;
+border:0;
+padding:12px 30px;
+border-radius:30px;
+margin-top:10px;
 
 }
 
@@ -148,9 +242,11 @@ color:red;
 <img src="logo.png" class="logo">
 
 
+
 <h1>
 🖥 PANEL LEGAL
 </h1>
+
 
 
 
@@ -167,16 +263,16 @@ Rp 5.000
 
 
 <p>
-RAM 1GB<br>
-Support 24 Jam
+✓ RAM 1GB<br>
+✓ Support 24 Jam<br>
+✓ Backup Server
 </p>
 
 
-<br>
+<button class="btn" onclick="payment('Panel Basic')">
 
-
-<button onclick="payment('Panel Basic')">
 ORDER
+
 </button>
 
 
@@ -187,7 +283,6 @@ ORDER
 
 
 <div class="card">
-
 
 <h2>
 Panel Premium
@@ -200,16 +295,16 @@ Rp 15.000
 
 
 <p>
-RAM Besar<br>
-Performance Tinggi
+✓ RAM Besar<br>
+✓ Performance Tinggi<br>
+✓ Priority Support
 </p>
 
 
-<br>
+<button class="btn" onclick="payment('Panel Premium')">
 
-
-<button onclick="payment('Panel Premium')">
 ORDER
+
 </button>
 
 
@@ -217,8 +312,13 @@ ORDER
 
 
 
+
+
+
 <a class="back" href="index.html">
+
 ← Kembali
+
 </a>
 
 
@@ -229,19 +329,29 @@ ORDER
 
 
 
+
+<!-- PAYMENT -->
+
 <div class="popup" id="pay">
+
 
 <div class="popup-box">
 
+
 <h2>
-💳 PEMBAYARAN
+💳 PAYMENT
 </h2>
 
 
-<p id="nama"></p>
+
+<p id="nama">
+</p>
+
+
 
 
 <img src="qris.png" class="qris">
+
 
 
 <p>
@@ -252,16 +362,9 @@ ke owner.
 
 
 
-<a href="https://wa.me/6285725269121"
-style="
-display:block;
-background:#25D366;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+
+<a class="contact wa"
+href="https://wa.me/6285725269121">
 
 🟢 WhatsApp Owner
 
@@ -270,16 +373,8 @@ text-decoration:none;
 
 
 
-<a href="https://t.me/akihiroid"
-style="
-display:block;
-background:#0088cc;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+<a class="contact telegram"
+href="https://t.me/akihiroid">
 
 🔵 Telegram Owner
 
@@ -288,16 +383,8 @@ text-decoration:none;
 
 
 
-<a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z"
-style="
-display:block;
-background:#8000ff;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+<a class="contact channel"
+href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
 
 🟣 Channel WhatsApp
 
@@ -315,9 +402,48 @@ Tutup
 
 </div>
 
+
 </div>
 
 
 
+
+
+
+
+<script>
+
+
+function payment(product){
+
+
+document.getElementById("pay").style.display="flex";
+
+
+document.getElementById("nama").innerHTML =
+"Produk : <b>"+product+"</b>";
+
+
+}
+
+
+
+
+function closePay(){
+
+
+document.getElementById("pay").style.display="none";
+
+
+}
+
+
+
+</script>
+
+
+
+
 </body>
+
 </html>
