@@ -995,24 +995,35 @@ solutions for your online needs.
 let index = 0;
 
 const track = document.getElementById("bannerTrack");
+const dots = document.querySelectorAll(".dot");
 
 setInterval(()=>{
 
 index++;
 
 if(index >= 3){
-index = 0;
+    index = 0;
 }
 
-track.style.transform =
+
+track.style.transform = 
 "translateX(-" + (index * 100) + "%)";
+
+
+// update titik
+
+dots.forEach(dot=>{
+    dot.classList.remove("active");
+});
+
+
+dots[index].classList.add("active");
 
 
 },4000);
 
 
 </script>
-
     
 </body>
 
