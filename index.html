@@ -878,7 +878,35 @@ solutions for your online needs.
 
 </div>
 
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+import { 
+getDatabase,
+ref,
+onValue
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-database.js";
+
+
+const firebaseConfig = {
+apiKey: "AIzaSyDvpiYywluj8yrImb7eVZG0ZPWgY33sgek",
+authDomain: "akihiro-store.firebaseapp.com",
+databaseURL: "https://akihiro-store-default-rtdb.asia-southeast1.firebasedatabase.app",
+projectId: "akihiro-store",
+storageBucket: "akihiro-store.firebasestorage.app",
+messagingSenderId: "522808539900",
+appId: "1:522808539900:web:5a356da88007f2ee3ef579"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const db = getDatabase(app);
+
+
+</script>
+    
 </body>
 
 
