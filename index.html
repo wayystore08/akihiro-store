@@ -19,62 +19,49 @@ font-family:Arial,sans-serif;
 
 
 body{
-
 background:#050505;
 color:white;
-
 }
 
 
 .container{
-
 max-width:950px;
 margin:auto;
 padding:20px;
-
 }
 
 
 /* LOGO */
 
 .logo{
-
 width:85%;
 max-width:450px;
 display:block;
 margin:30px auto;
 filter:drop-shadow(0 0 25px red);
-
 }
+
 
 
 /* HERO */
 
 .hero{
-
 text-align:center;
 padding:20px;
-
 }
 
 
 .hero h1{
-
 font-size:42px;
 color:red;
 text-shadow:0 0 20px red;
-
 }
-
 
 
 .hero h2{
-
-font-size:24px;
 margin-top:15px;
-
+font-size:24px;
 }
-
 
 
 .hero p{
@@ -83,12 +70,14 @@ color:#aaa;
 line-height:30px;
 margin:20px auto;
 max-width:700px;
-font-size:17px;
 
 }
 
 
 
+
+
+/* BADGE */
 
 .badges{
 
@@ -101,18 +90,19 @@ margin:25px 0;
 }
 
 
+
 .badge{
 
 background:#111;
 border:1px solid #700;
 padding:12px 20px;
 border-radius:30px;
-color:#ddd;
 
 }
 
 
 
+/* BUTTON */
 
 .btn{
 
@@ -123,14 +113,6 @@ border-radius:30px;
 background:red;
 color:white;
 text-decoration:none;
-transition:.3s;
-
-}
-
-
-.btn:hover{
-
-box-shadow:0 0 20px red;
 
 }
 
@@ -144,7 +126,8 @@ background:#8000ff;
 
 
 
-/* SECTION */
+
+/* TITLE */
 
 .title{
 
@@ -161,9 +144,12 @@ text-shadow:0 0 10px red;
 
 /* SERVICES */
 
-
 .services{
 
+background:#111;
+border:1px solid #700;
+border-radius:20px;
+padding:30px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
@@ -172,36 +158,26 @@ gap:20px;
 
 
 
-.card{
+.service-box{
 
-background:#111;
-border:1px solid #700;
-border-radius:20px;
-padding:25px;
 text-align:center;
+padding:20px;
+border-radius:15px;
 
 }
 
 
 
-.card:hover{
-
-box-shadow:0 0 20px red;
-
-}
-
-
-
-.card h2{
+.service-box h2{
 
 color:#ff3030;
-margin-bottom:15px;
+margin-bottom:10px;
 
 }
 
 
 
-.card p{
+.service-box p{
 
 color:#aaa;
 line-height:25px;
@@ -211,7 +187,52 @@ line-height:25px;
 
 
 
-/* PRODUCT */
+
+/* ARROW GUIDE */
+
+
+.scroll-guide{
+
+text-align:center;
+margin:35px 0;
+color:red;
+font-size:35px;
+animation:down 1.5s infinite;
+
+}
+
+
+
+.scroll-guide p{
+
+font-size:17px;
+color:#aaa;
+margin-top:10px;
+
+}
+
+
+
+@keyframes down{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+
+
+/* PRODUCTS */
 
 
 .products{
@@ -233,6 +254,15 @@ padding:30px;
 text-align:center;
 text-decoration:none;
 color:white;
+transition:.3s;
+
+}
+
+
+.product:hover{
+
+box-shadow:0 0 20px red;
+transform:translateY(-5px);
 
 }
 
@@ -244,7 +274,6 @@ color:red;
 }
 
 
-
 .product p{
 
 color:#aaa;
@@ -252,8 +281,8 @@ margin-top:10px;
 
 }
 
- 
 /* WHY AKIHIRO */
+
 
 .choose{
 
@@ -276,8 +305,8 @@ color:red;
 
 
 
-
 /* CONTACT */
+
 
 .contact a{
 
@@ -285,11 +314,12 @@ display:block;
 padding:15px;
 margin:12px 0;
 border-radius:30px;
+text-align:center;
 text-decoration:none;
 color:white;
-text-align:center;
 
 }
+
 
 
 .wa{
@@ -316,8 +346,8 @@ background:#8000ff;
 
 
 
-
 /* FOOTER */
+
 
 footer{
 
@@ -327,7 +357,6 @@ line-height:25px;
 margin:50px 0;
 
 }
-
 
 
 
@@ -353,17 +382,20 @@ font-size:32px;
 }
 
 
+
 </style>
 
 
 </head>
 
 
-
 <body>
 
 
+
 <div class="container">
+
+
 
 
 
@@ -372,7 +404,10 @@ font-size:32px;
 
 
 
+
+
 <div class="hero">
+
 
 
 <h1>
@@ -380,6 +415,7 @@ font-size:32px;
 AKIHIRO STORE
 
 </h1>
+
 
 
 <h2>
@@ -390,14 +426,19 @@ YOUR TRUSTED DIGITAL PARTNER
 
 
 
+
 <p>
 
 Temukan berbagai layanan digital dengan kualitas terbaik
 untuk mendukung kebutuhan online kamu.
 
+<br><br>
+
 AKIHIRO hadir sebagai partner digital terpercaya yang menyediakan
 Hosting Panel, WhatsApp Bot Service, Jasa Share, hingga layanan
 promosi online.
+
+<br><br>
 
 Dengan pelayanan cepat, proses mudah, dan dukungan responsif,
 kami siap membantu kebutuhan digital kamu.
@@ -407,34 +448,28 @@ kami siap membantu kebutuhan digital kamu.
 
 
 
+
+
 <div class="badges">
 
 
 <div class="badge">
-
 ⚡ Fast Service
-
 </div>
 
 
 <div class="badge">
-
 🛡️ Trusted Quality
-
 </div>
 
 
 <div class="badge">
-
 💳 Easy Payment
-
 </div>
 
 
 <div class="badge">
-
 🚀 Support
-
 </div>
 
 
@@ -453,7 +488,6 @@ kami siap membantu kebutuhan digital kamu.
 
 
 
-
 <a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z"
 class="btn channel-btn">
 
@@ -463,8 +497,9 @@ class="btn channel-btn">
 
 
 
-
 </div>
+
+
 
 
 
@@ -481,24 +516,21 @@ OUR SERVICES
 
 
 
+
+
 <div class="services">
 
 
 
-<div class="card">
+<div class="service-box">
 
 <h2>
-
 🖥 PANEL
-
 </h2>
 
-
 <p>
-
 Hosting server dengan performa stabil
 untuk berbagai kebutuhan digital.
-
 </p>
 
 
@@ -508,20 +540,15 @@ untuk berbagai kebutuhan digital.
 
 
 
-<div class="card">
+<div class="service-box">
 
 <h2>
-
 🤖 WHATSAPP BOT
-
 </h2>
 
-
 <p>
-
 Automasi WhatsApp untuk membantu
 aktivitas menjadi lebih mudah.
-
 </p>
 
 
@@ -531,20 +558,16 @@ aktivitas menjadi lebih mudah.
 
 
 
-<div class="card">
+
+<div class="service-box">
 
 <h2>
-
 🛠 JASHER
-
 </h2>
 
-
 <p>
-
-Layanan share WhatsApp untuk
-membantu penyebaran informasi.
-
+Layanan share WhatsApp untuk membantu
+penyebaran informasi.
 </p>
 
 
@@ -554,25 +577,41 @@ membantu penyebaran informasi.
 
 
 
-<div class="card">
+<div class="service-box">
 
 <h2>
-
 🚀 JAPUSH
-
 </h2>
 
-
 <p>
-
-Layanan push dan promosi
-untuk meningkatkan jangkauan.
-
+Layanan push dan promosi untuk
+meningkatkan jangkauan.
 </p>
 
 
 </div>
 
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="scroll-guide">
+
+
+⬇️
+
+
+<p>
+Pilih layanan yang kamu butuhkan
+</p>
 
 
 </div>
@@ -594,13 +633,18 @@ OUR PRODUCTS
 
 
 
+
+
+
 <div class="products">
 
 
 
 
 
+
 <a href="panel.html" class="product">
+
 
 <h2>
 
@@ -623,8 +667,8 @@ Pterodactyl Hosting
 
 
 
-
 <a href="bot.html" class="product">
+
 
 <h2>
 
@@ -650,6 +694,7 @@ WhatsApp Bot Service
 
 <a href="jasher.html" class="product">
 
+
 <h2>
 
 🛠 JASHER
@@ -671,8 +716,8 @@ Jasa Share WhatsApp
 
 
 
-
 <a href="japush.html" class="product">
+
 
 <h2>
 
@@ -689,6 +734,7 @@ Jasa Push & Promosi
 
 
 </a>
+
 
 
 
@@ -713,22 +759,29 @@ WHY AKIHIRO?
 
 
 
+
+
+
 <div class="choose">
 
 
 <span>✓</span> Pelayanan cepat dan responsif
+
 <br>
 
 
 <span>✓</span> Proses order mudah
+
 <br>
 
 
 <span>✓</span> Pembayaran aman menggunakan QRIS
+
 <br>
 
 
 <span>✓</span> Support melalui WhatsApp & Telegram
+
 <br>
 
 
@@ -754,6 +807,8 @@ CONTACT
 
 
 
+
+
 <div class="contact">
 
 
@@ -766,12 +821,14 @@ href="https://wa.me/6285725269121">
 
 
 
+
 <a class="telegram"
 href="https://t.me/akihiroid">
 
 🔵 Telegram Owner
 
 </a>
+
 
 
 
@@ -794,21 +851,29 @@ href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
 
 
 
+
+
 <footer>
 
 
 <b>AKIHIRO.CO</b>
 
+
 <br>
+
 
 Your trusted partner in digital services.
 
+
 <br>
+
 
 Providing simple, fast, and reliable
 solutions for your online needs.
 
+
 <br><br>
+
 
 © 2026 AKIHIRO.CO
 
@@ -819,9 +884,12 @@ solutions for your online needs.
 
 
 
+
+
 </div>
 
 
 </body>
+
 
 </html>
