@@ -1,226 +1,415 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AKIHIRO STORE</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-body {
-    background: #050505;
-    color: white;
-    min-height: 100vh;
+body{
+background:#050505;
+color:white;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px 20px;
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 10px;
+
+/* LOGO */
+
+.logo{
+width:100%;
+max-width:500px;
+display:block;
+margin:30px auto;
+filter:drop-shadow(0 0 20px red);
 }
 
-.logo {
-    font-size: 42px;
-    font-weight: bold;
-    color: #b84dff;
-    text-shadow: 0 0 20px #b84dff;
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:20px;
 }
 
-.hero p {
-    margin-top: 15px;
-    color: #aaa;
-    font-size: 18px;
+.hero h1{
+font-size:35px;
+color:#ff0000;
+text-shadow:0 0 15px red;
 }
 
-.btn {
-    display: inline-block;
-    margin: 20px 5px;
-    padding: 14px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    background: #8a2be2;
-    box-shadow: 0 0 20px #8a2be2;
+.hero p{
+color:#aaa;
+margin-top:10px;
 }
 
-.section-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 28px;
+
+
+/* CATEGORY */
+
+.title{
+text-align:center;
+font-size:28px;
+margin:40px 0 20px;
+color:#ff2020;
 }
 
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+
+.categories{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
-.card {
-    background: #111;
-    border: 1px solid #333;
-    border-radius: 20px;
-    padding: 25px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(138,43,226,0.2);
+
+.category{
+background:#111;
+border:1px solid #500;
+border-radius:20px;
+padding:25px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
 }
 
-.card h2 {
-    color: #c56cff;
+
+.category:hover{
+box-shadow:0 0 25px red;
+transform:translateY(-5px);
 }
 
-.price {
-    font-size: 30px;
-    margin: 15px;
+
+.category h2{
+color:red;
 }
 
-.card ul {
-    list-style: none;
-    color: #bbb;
-    line-height: 30px;
+
+.category p{
+color:#aaa;
+margin-top:10px;
 }
 
-.order {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 12px 25px;
-    background: #25D366;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
+
+
+/* PRODUCT */
+
+.products{
+display:none;
+margin-top:30px;
 }
 
-.features {
-    text-align: center;
-    margin-top: 50px;
+
+.product{
+background:#111;
+border:1px solid #600;
+border-radius:20px;
+padding:20px;
+margin-bottom:20px;
 }
 
-.features p {
-    color: #bbb;
-    margin: 12px;
+
+.product h3{
+color:#ff3030;
 }
 
-.contact {
-    text-align: center;
-    margin-top: 50px;
-    padding-bottom: 40px;
+
+.price{
+font-size:25px;
+margin:10px 0;
 }
 
-.contact a {
-    display: block;
-    margin: 12px auto;
-    width: 250px;
-    padding: 13px;
-    border-radius: 25px;
-    text-decoration: none;
-    color:white;
+
+.btn{
+
+display:inline-block;
+padding:12px 25px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:30px;
+cursor:pointer;
+
 }
 
-.wa {
-    background:#25D366;
+
+
+/* POPUP */
+
+.popup{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+align-items:center;
+justify-content:center;
+
 }
 
-.tg {
-    background:#0088cc;
+
+.popup-box{
+
+background:#111;
+border:2px solid red;
+border-radius:20px;
+padding:30px;
+text-align:center;
+width:90%;
+max-width:400px;
+
 }
 
-.channel {
-    background:#9b59ff;
+
+.popup-box h2{
+
+color:red;
+
 }
 
-footer {
-    text-align:center;
-    color:#666;
-    padding:20px;
+
+.qris{
+
+width:250px;
+margin:20px auto;
+
 }
+
+
+.close{
+
+background:#333;
+margin-top:10px;
+
+}
+
+
+.contact a{
+
+display:block;
+padding:15px;
+margin:10px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+
+}
+
+
+.wa{
+background:#25D366;
+}
+
+
+.tg{
+background:#0088cc;
+}
+
+
+.channel{
+background:#8000ff;
+}
+
+
+
+footer{
+
+text-align:center;
+color:#666;
+margin:40px;
+
+}
+
+
 
 </style>
+
 </head>
 
-
-<body>
+    <body>
 
 <div class="container">
 
-<section class="hero">
 
-<div class="logo">
-AKIHIRO STORE
+<!-- LOGO -->
+<img src="logo.png" class="logo">
+
+
+<div class="hero">
+
+<h1>AKIHIRO STORE</h1>
+
+<p>
+Premium Digital Service<br>
+Fast • Secure • Trusted
+</p>
+
+</div>
+
+
+
+<h2 class="title">
+PILIH KATEGORI
+</h2>
+
+
+
+<div class="categories">
+
+
+<div class="category" onclick="showProduct('panel')">
+
+<h2>🖥 PANEL</h2>
+
+<p>
+Pterodactyl Hosting
+</p>
+
+</div>
+
+
+
+<div class="category" onclick="showProduct('bot')">
+
+<h2>🤖 SEWA BOT</h2>
+
+<p>
+WhatsApp Bot Service
+</p>
+
+</div>
+
+
+
+<div class="category" onclick="showProduct('jasher')">
+
+<h2>🛠 JASHER</h2>
+
+<p>
+Jasa Server & Setup
+</p>
+
+</div>
+
+
+
+<div class="category" onclick="showProduct('japush')">
+
+<h2>🚀 JAPUSH</h2>
+
+<p>
+Jasa Push & Promote
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- =====================
+ EDIT PRODUK DISINI
+===================== -->
+
+
+<div id="panel" class="products">
+
+<h2 class="title">
+PANEL LEGAL
+</h2>
+
+
+<div class="product">
+
+<h3>Panel Basic</h3>
+
+<div class="price">
+Rp 5.000
 </div>
 
 <p>
-Premium Bot & Server Hosting<br>
-Fast • Stable • 24/7 Support
+RAM 1GB<br>
+Support 24 Jam
 </p>
 
-<a class="btn" href="https://wa.me/6285725269121">
-Order Sekarang
-</a>
+<br>
 
-</section>
+<button class="btn" onclick="payment('Panel Basic')">
+ORDER
+</button>
 
-
-<h2 class="section-title">
-Pilih Paket
-</h2>
+</div>
 
 
-<div class="cards">
 
+<div class="product">
 
-<div class="card">
-
-<h2>STARTER</h2>
+<h3>Panel Premium</h3>
 
 <div class="price">
-Rp20K
+Rp 15.000
 </div>
 
-<ul>
-<li>✓ 512MB RAM</li>
-<li>✓ 1 Bot WhatsApp</li>
-<li>✓ Backup</li>
-<li>✓ Support Owner</li>
-</ul>
+<p>
+RAM Besar<br>
+Performance Tinggi
+</p>
 
-<a class="order" href="https://wa.me/6285725269121">
+<br>
+
+<button class="btn" onclick="payment('Panel Premium')">
 ORDER
-</a>
+</button>
+
+</div>
+
 
 </div>
 
 
 
-<div class="card">
 
-<h2>PRO ⭐</h2>
+<div id="bot" class="products">
+
+<h2 class="title">
+SEWA BOT
+</h2>
+
+
+<div class="product">
+
+<h3>Bot Basic</h3>
 
 <div class="price">
-Rp50K
+Rp 10.000
 </div>
 
-<ul>
-<li>✓ 2GB RAM</li>
-<li>✓ Multi Bot</li>
-<li>✓ Server Stabil</li>
-<li>✓ Priority Support</li>
-</ul>
+<p>
+Online 24 Jam
+</p>
 
-<a class="order" href="https://wa.me/6285725269121">
+
+<button class="btn" onclick="payment('Sewa Bot Basic')">
 ORDER
-</a>
+</button>
 
 </div>
 
@@ -228,52 +417,68 @@ ORDER
 </div>
 
 
-<div class="features">
-
-<h2 class="section-title">
-Kenapa AKIHIRO?
-</h2>
-
-<p>⚡ Server Cepat</p>
-<p>🛡️ Online 24 Jam</p>
-<p>💾 Backup Aman</p>
-<p>👨‍💻 Support Langsung Owner</p>
-
-</div>
 
 
 
-<div class="contact">
+<div id="jasher" class="products">
 
-<h2 class="section-title">
-Contact
+<h2 class="title">
+JASHER
 </h2>
 
 
-<a class="wa" href="https://wa.me/6285725269121">
-WhatsApp Owner
-</a>
+<div class="product">
+
+<h3>Setup Server</h3>
+
+<div class="price">
+Rp -
+</div>
+
+<p>
+Custom sesuai kebutuhan
+</p>
 
 
-<a class="channel" href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
-Join WhatsApp Channel
-</a>
+<button class="btn" onclick="payment('Jasher')">
+ORDER
+</button>
 
 
-<a class="tg" href="https://t.me/akihiroid">
-Telegram Owner
-</a>
+</div>
+
+</div>
+
+
+
+
+
+<div id="japush" class="products">
+
+<h2 class="title">
+JAPUSH
+</h2>
+
+
+<div class="product">
+
+<h3>Paket Push</h3>
+
+<div class="price">
+Rp -
+</div>
+
+<p>
+Promosi & Push
+</p>
+
+
+<button class="btn" onclick="payment('Japush')">
+ORDER
+</button>
 
 
 </div>
 
 
-<footer>
-© 2026 AKIHIRO STORE
-</footer>
-
-
 </div>
-
-</body>
-</html>
