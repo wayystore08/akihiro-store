@@ -51,16 +51,24 @@ filter:drop-shadow(0 0 25px red);
     margin:20px 0 40px;
 }
 
-.banner-slider img{
+.banner-slider{
     width:100%;
-    display:none;
+    overflow:hidden;
+    border-radius:25px;
+    margin:20px 0 40px;
+}
+
+.banner-track{
+    display:flex;
+    transition:.5s;
+}
+
+.banner-track img{
+    width:100%;
+    flex-shrink:0;
     border-radius:25px;
     box-shadow:0 0 25px red;
 }
-
-.banner-slider img:first-child{
-    display:block;
-}    
     
 
 /* HERO */
@@ -451,17 +459,17 @@ font-size:32px;
 
 
 
-
-<img src="logo.png" class="logo">
-    
-
 <div class="banner-slider">
+
+<div class="banner-track" id="bannerTrack">
 
 <img src="assets/banner/banner1.png">
 
 <img src="assets/banner/banner2.png">
 
 <img src="assets/banner/banner3.png">
+
+</div>
 
 </div>
 
@@ -956,7 +964,29 @@ solutions for your online needs.
 
 </div>
 
-alert("SELAMAT DATANG BOSS");   
+<script>
+
+let index = 0;
+
+const track = document.getElementById("bannerTrack");
+
+setInterval(()=>{
+
+index++;
+
+if(index >= 3){
+index = 0;
+}
+
+track.style.transform =
+"translateX(-" + (index * 100) + "%)";
+
+
+},4000);
+
+
+</script>
+
     
 </body>
 
