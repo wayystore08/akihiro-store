@@ -19,27 +19,82 @@ font-family:Arial,sans-serif;
 
 
 body{
+
 background:#050505;
 color:white;
+
 }
 
 
 .container{
+
 max-width:700px;
 margin:auto;
 padding:20px;
+
 }
 
 
 
-.logo{
-width:80%;
-max-width:400px;
-display:block;
-margin:20px auto;
-filter:drop-shadow(0 0 20px red);
+/* HEADER */
+
+
+.top-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+
 }
 
+
+.mini-logo{
+
+width:110px;
+
+filter:drop-shadow(0 0 10px red);
+
+}
+
+
+
+.header-right{
+
+display:flex;
+gap:15px;
+align-items:center;
+font-size:22px;
+
+}
+
+
+
+.header-right a{
+
+color:white;
+text-decoration:none;
+font-size:25px;
+
+}
+
+
+
+/* BANNER */
+
+
+.banner{
+
+width:100%;
+border-radius:20px;
+margin:20px 0;
+box-shadow:0 0 25px red;
+
+}
+
+
+
+/* TITLE */
 
 
 h1{
@@ -47,8 +102,64 @@ h1{
 text-align:center;
 color:red;
 font-size:32px;
-margin:20px;
+margin:20px 0;
 text-shadow:0 0 15px red;
+
+}
+
+
+
+.subtitle{
+
+text-align:center;
+color:#aaa;
+font-size:18px;
+margin-bottom:25px;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin:25px 0;
+
+}
+
+
+
+.features div{
+
+background:#111;
+border:1px solid #700;
+border-radius:15px;
+padding:12px 5px;
+text-align:center;
+font-size:13px;
+color:#ddd;
+
+}
+
+
+
+
+
+/* PACKAGE */
+
+
+.package-list{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 
 }
 
@@ -58,9 +169,9 @@ text-shadow:0 0 15px red;
 
 background:#111;
 border:1px solid #700;
-border-radius:20px;
-padding:25px;
-margin:20px 0;
+border-radius:18px;
+padding:18px;
+text-align:center;
 box-shadow:0 0 15px #300;
 
 }
@@ -70,6 +181,7 @@ box-shadow:0 0 15px #300;
 .card h2{
 
 color:#ff3030;
+font-size:18px;
 
 }
 
@@ -77,8 +189,8 @@ color:#ff3030;
 
 .price{
 
-font-size:30px;
-margin:15px 0;
+font-size:24px;
+margin:10px 0;
 
 }
 
@@ -87,7 +199,8 @@ margin:15px 0;
 .card p{
 
 color:#aaa;
-line-height:25px;
+font-size:14px;
+line-height:22px;
 
 }
 
@@ -96,16 +209,14 @@ line-height:25px;
 .btn{
 
 display:inline-block;
-margin-top:20px;
-padding:14px 30px;
+margin-top:15px;
+padding:10px 25px;
 background:red;
 color:white;
 border:0;
 border-radius:30px;
-font-size:16px;
+font-size:15px;
 cursor:pointer;
-position:relative;
-z-index:10;
 
 }
 
@@ -121,11 +232,524 @@ text-decoration:none;
 
 }
 
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
 
 
 
 
-/* PAYMENT */
+
+<!-- HEADER -->
+
+
+<div class="top-header">
+
+
+<img src="logo.png" class="mini-logo">
+
+
+<div class="header-right">
+
+<span>🇮🇩</span>
+
+
+<a href="index.html">
+←
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- BANNER -->
+
+
+<img src="jasher.png" class="banner">
+
+
+
+
+
+
+<!-- TITLE -->
+
+
+<h1>
+
+🛠 JASHER SERVICE
+
+</h1>
+
+
+
+<p class="subtitle">
+
+Jasa Share WhatsApp Marketing
+
+</p>
+
+
+
+
+
+
+
+<!-- FEATURES -->
+
+
+<div class="features">
+
+
+
+<div>
+
+⚡
+
+<br>
+
+Fast Process
+
+</div>
+
+
+
+
+<div>
+
+🛡️
+
+<br>
+
+Secure
+
+</div>
+
+
+
+
+
+<div>
+
+💬
+
+<br>
+
+Support 24/7
+
+</div>
+
+
+
+
+
+<div>
+
+💳
+
+<br>
+
+Easy Payment
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PACKAGE -->
+
+
+<div class="package-list">
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+3x SHARE ALL GRUB
+
+</h2>
+
+
+<div class="price">
+
+Rp 2.000
+
+</div>
+
+
+<p>
+
+✓ Share ke semua grup WhatsApp<br>
+✓ Target sesuai kebutuhan<br>
+✓ Bukti pengerjaan
+
+</p>
+
+
+<button class="btn" onclick="payment('3x SHARE ALL GRUB - Rp 2.000')">
+
+ORDER
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+5x SHARE ALL GRUB
+
+</h2>
+
+
+<div class="price">
+
+Rp 3.000
+
+</div>
+
+
+<p>
+
+✓ Share ke semua grup WhatsApp<br>
+✓ Target sesuai kebutuhan<br>
+✓ Bukti pengerjaan
+
+</p>
+
+
+<button class="btn" onclick="payment('5x SHARE ALL GRUB - Rp 3.000')">
+
+ORDER
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+8x SHARE ALL GRUB
+
+</h2>
+
+
+<div class="price">
+
+Rp 5.000
+
+</div>
+
+
+<p>
+
+✓ Share ke semua grup WhatsApp<br>
+✓ Target sesuai kebutuhan<br>
+✓ Bukti pengerjaan
+
+</p>
+
+
+<button class="btn" onclick="payment('8x SHARE ALL GRUB - Rp 5.000')">
+
+ORDER
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+10x SHARE ALL GRUB
+
+</h2>
+
+
+<div class="price">
+
+Rp 7.000
+
+</div>
+
+
+<p>
+
+✓ Share ke semua grup WhatsApp<br>
+✓ Target sesuai kebutuhan<br>
+✓ Bukti pengerjaan
+
+</p>
+
+
+<button class="btn" onclick="payment('10x SHARE ALL GRUB - Rp 7.000')">
+
+ORDER
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+15x SHARE ALL GRUB
+
+</h2>
+
+
+<div class="price">
+
+Rp 10.000
+
+</div>
+
+
+<p>
+
+✓ Share ke semua grup WhatsApp<br>
+✓ Target sesuai kebutuhan<br>
+✓ Bukti pengerjaan
+
+</p>
+
+
+<button class="btn" onclick="payment('15x SHARE ALL GRUB - Rp 10.000')">
+
+ORDER
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<a class="back" href="index.html">
+
+← Kembali
+
+</a>
+
+</div>
+
+
+
+
+
+
+<!-- PAYMENT -->
+
+
+<div class="popup" id="pay">
+
+
+<div class="popup-box">
+
+
+
+<h2>
+
+💳 PAYMENT
+
+</h2>
+
+
+
+
+<div class="order-detail">
+
+
+<h3>
+
+🧾 DETAIL ORDER
+
+</h3>
+
+
+<p id="nama"></p>
+
+
+</div>
+
+
+
+
+
+
+<img src="qris.png" class="qris">
+
+
+
+
+
+
+<p>
+
+Scan QRIS untuk melakukan pembayaran.
+
+<br><br>
+
+Setelah pembayaran berhasil,
+silahkan kirim bukti transfer ke owner.
+
+</p>
+
+
+
+
+
+
+
+
+<a class="contact wa"
+
+href="https://wa.me/6285725269121?text=Halo%20kak,%20saya%20sudah%20melakukan%20pembayaran%20JASHER%20dan%20akan%20mengirimkan%20bukti%20transfer."
+
+target="_blank">
+
+
+🟢 WhatsApp Owner
+
+
+</a>
+
+
+
+
+
+
+
+<a class="contact telegram"
+
+href="https://t.me/akihiroid">
+
+
+🔵 Telegram Owner
+
+
+</a>
+
+
+
+
+
+
+
+<a class="contact channel"
+
+href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
+
+
+🟣 Channel WhatsApp
+
+
+</a>
+
+
+
+
+
+
+
+<button class="close" onclick="closePay()">
+
+Tutup
+
+</button>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<style>
+
 
 .popup{
 
@@ -159,6 +783,7 @@ text-align:center;
 
 
 
+
 .popup-box h2{
 
 color:red;
@@ -167,12 +792,36 @@ color:red;
 
 
 
+
 .qris{
 
-width:250px;
+width:220px;
 margin:20px auto;
 
 }
+
+
+
+
+.order-detail{
+
+background:#080808;
+border:1px solid #700;
+border-radius:15px;
+padding:15px;
+margin:15px 0;
+
+}
+
+
+
+.order-detail h3{
+
+color:#ff3030;
+
+}
+
+
 
 
 
@@ -189,11 +838,13 @@ text-decoration:none;
 
 
 
+
 .wa{
 
 background:#25D366;
 
 }
+
 
 
 
@@ -205,11 +856,14 @@ background:#0088cc;
 
 
 
+
 .channel{
 
 background:#8000ff;
 
 }
+
+
 
 
 
@@ -225,304 +879,9 @@ margin-top:10px;
 }
 
 
+
 </style>
 
-</head>
-
-
-
-<body>
-
-
-<div class="container">
-
-
-<img src="logo.png" class="logo">
-
-
-
-<h1>
-🛠 JASHER
-</h1>
-
-
-<p style="text-align:center;color:#aaa;">
-Jasa Share WhatsApp
-</p>
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-3x SHARE ALL GRUB
-</h2>
-
-
-<div class="price">
-Rp 2.000
-</div>
-
-
-<p>
-
-✓ Share ke semua grup WhatsApp<br>
-✓ Target sesuai kebutuhan<br>
-✓ Bukti pengerjaan
-
-</p>
-
-
-
-<button class="btn" onclick="payment('Jasher Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h2>
-5x SHARE ALL GRUB
-</h2>
-
-
-<div class="price">
-Rp 3.000
-</div>
-
-
-<p>
-
-✓ Share ke semua grup WhatsApp<br>
-✓ Target sesuai kebutuhan<br>
-✓ Bukti pengerjaan
-
-</p>
-
-
-
-<button class="btn" onclick="payment('Jasher Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-8x SHARE ALL GRUB
-</h2>
-
-
-<div class="price">
-Rp 5.000
-</div>
-
-
-<p>
-
-✓ Share ke semua grup WhatsApp<br>
-✓ Target sesuai kebutuhan<br>
-✓ Bukti pengerjaan
-
-</p>
-
-
-
-<button class="btn" onclick="payment('Jasher Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-10x SHARE ALL GRUB
-</h2>
-
-
-<div class="price">
-Rp 7.000
-</div>
-
-
-<p>
-
-✓ Share ke semua grup WhatsApp<br>
-✓ Target sesuai kebutuhan<br>
-✓ Bukti pengerjaan
-
-</p>
-
-
-
-<button class="btn" onclick="payment('Jasher Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h2>
-15x SHARE ALL GRUB
-</h2>
-
-
-<div class="price">
-Rp 10.000
-</div>
-
-
-<p>
-
-✓ Share ke semua grup WhatsApp<br>
-✓ Target sesuai kebutuhan<br>
-✓ Bukti pengerjaan
-
-</p>
-
-
-
-<button class="btn" onclick="payment('Jasher Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-
-
-
-
-<a class="back" href="index.html">
-
-← Kembali
-
-</a>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PAYMENT -->
-
-
-<div class="popup" id="pay">
-
-
-<div class="popup-box">
-
-
-<h2>
-💳 PAYMENT
-</h2>
-
-
-
-<p id="nama"></p>
-
-
-
-<img src="qris.png" class="qris">
-
-
-
-<p>
-Setelah melakukan pembayaran,
-silahkan kirim bukti pembayaran
-ke owner.
-</p>
-
-
-
-<a class="contact wa" 
-  href="https://wa.me/6285725269121?text=Halo%20kak,%20saya%20sudah%20melakukan%20pembayaran%20JASHER%20dan%20akan%20mengirimkan%20bukti%20transfer." target="_blank">
-
-🟢 WhatsApp Owner
-
-</a>
-
-
-
-
-<a class="contact telegram"
-href="https://t.me/akihiroid">
-
-🔵 Telegram Owner
-
-</a>
-
-
-
-
-<a class="contact channel"
-href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
-
-🟣 Channel WhatsApp
-
-</a>
-
-
-
-
-<button class="close" onclick="closePay()">
-
-Tutup
-
-</button>
-
-
-
-</div>
-
-</div>
 
 
 
@@ -533,6 +892,7 @@ Tutup
 <script>
 
 
+
 function payment(product){
 
 
@@ -540,20 +900,31 @@ document.getElementById("pay").style.display="flex";
 
 
 document.getElementById("nama").innerHTML =
+
 "Produk : <b>"+product+"</b>";
 
+
+
 }
+
+
+
+
 
 
 
 function closePay(){
 
+
 document.getElementById("pay").style.display="none";
+
 
 }
 
 
+
 </script>
+
 
 
 
