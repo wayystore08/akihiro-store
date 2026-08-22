@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AKIHIRO STORE</title>
+
 
 <style>
 
@@ -15,56 +17,152 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+
 body{
+
 background:#050505;
 color:white;
+
 }
+
 
 .container{
-max-width:900px;
+
+max-width:950px;
 margin:auto;
 padding:20px;
+
 }
+
+
+/* LOGO */
 
 .logo{
-width:90%;
-max-width:500px;
+
+width:85%;
+max-width:450px;
 display:block;
 margin:30px auto;
-filter:drop-shadow(0 0 20px red);
+filter:drop-shadow(0 0 25px red);
+
 }
 
+
+/* HERO */
 
 .hero{
+
 text-align:center;
+padding:20px;
+
 }
 
+
 .hero h1{
+
+font-size:42px;
 color:red;
-font-size:35px;
-text-shadow:0 0 15px red;
+text-shadow:0 0 20px red;
+
 }
+
+
+
+.hero h2{
+
+font-size:24px;
+margin-top:15px;
+
+}
+
 
 
 .hero p{
+
 color:#aaa;
-margin-top:10px;
+line-height:30px;
+margin:20px auto;
+max-width:700px;
+font-size:17px;
+
 }
 
 
+
+
+.badges{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin:25px 0;
+
+}
+
+
+.badge{
+
+background:#111;
+border:1px solid #700;
+padding:12px 20px;
+border-radius:30px;
+color:#ddd;
+
+}
+
+
+
+
+.btn{
+
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+border-radius:30px;
+background:red;
+color:white;
+text-decoration:none;
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+box-shadow:0 0 20px red;
+
+}
+
+
+
+.channel-btn{
+
+background:#8000ff;
+
+}
+
+
+
+/* SECTION */
 
 .title{
 
 text-align:center;
-margin:40px 0 20px;
+font-size:32px;
 color:red;
-font-size:28px;
+margin:60px 0 30px;
+text-shadow:0 0 10px red;
 
 }
 
 
 
-.categories{
+
+/* SERVICES */
+
+
+.services{
 
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -74,63 +172,122 @@ gap:20px;
 
 
 
-.category{
+.card{
 
-display:block;
 background:#111;
-border:1px solid #600;
+border:1px solid #700;
+border-radius:20px;
+padding:25px;
+text-align:center;
+
+}
+
+
+
+.card:hover{
+
+box-shadow:0 0 20px red;
+
+}
+
+
+
+.card h2{
+
+color:#ff3030;
+margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+color:#aaa;
+line-height:25px;
+
+}
+
+
+
+
+/* PRODUCT */
+
+
+.products{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+
+}
+
+
+
+.product{
+
+background:#111;
+border:1px solid #700;
 border-radius:20px;
 padding:30px;
 text-align:center;
 text-decoration:none;
 color:white;
-transition:.3s;
 
 }
 
 
-
-.category:hover{
-
-box-shadow:0 0 25px red;
-transform:translateY(-5px);
-
-}
-
-
-
-.category h2{
+.product h2{
 
 color:red;
 
 }
 
 
-.category p{
+
+.product p{
 
 color:#aaa;
 margin-top:10px;
 
 }
 
+ 
+/* WHY AKIHIRO */
 
+.choose{
 
-.contact{
-
-margin-top:40px;
-text-align:center;
+background:#111;
+border:1px solid #700;
+border-radius:20px;
+padding:30px;
+line-height:35px;
+color:#ccc;
 
 }
 
+
+
+.choose span{
+
+color:red;
+
+}
+
+
+
+
+/* CONTACT */
 
 .contact a{
 
 display:block;
 padding:15px;
-margin:10px;
+margin:12px 0;
 border-radius:30px;
 text-decoration:none;
 color:white;
+text-align:center;
 
 }
 
@@ -142,11 +299,13 @@ background:#25D366;
 }
 
 
-.tg{
+
+.telegram{
 
 background:#0088cc;
 
 }
+
 
 
 .channel{
@@ -157,18 +316,48 @@ background:#8000ff;
 
 
 
+
+/* FOOTER */
+
 footer{
 
 text-align:center;
-color:#666;
-margin:40px;
+color:#777;
+line-height:25px;
+margin:50px 0;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.services,
+.products{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
 
 }
 
 
 </style>
 
+
 </head>
+
 
 
 <body>
@@ -177,80 +366,390 @@ margin:40px;
 <div class="container">
 
 
+
 <img src="logo.png" class="logo">
+
+
 
 
 <div class="hero">
 
-<h1>AKIHIRO STORE</h1>
 
-<p>
-Premium Digital Service<br>
-Fast • Secure • Trusted
-</p>
+<h1>
 
-</div>
+AKIHIRO STORE
+
+</h1>
 
 
+<h2>
 
-<h2 class="title">
-PILIH PRODUK
+YOUR TRUSTED DIGITAL PARTNER
+
 </h2>
 
 
 
-<div class="categories">
-
-
-<a href="panel.html" class="category">
-
-<h2>🖥 PANEL</h2>
-
 <p>
-Pterodactyl Hosting
+
+Temukan berbagai layanan digital dengan kualitas terbaik
+untuk mendukung kebutuhan online kamu.
+
+AKIHIRO hadir sebagai partner digital terpercaya yang menyediakan
+Hosting Panel, WhatsApp Bot Service, Jasa Share, hingga layanan
+promosi online.
+
+Dengan pelayanan cepat, proses mudah, dan dukungan responsif,
+kami siap membantu kebutuhan digital kamu.
+
 </p>
 
-</a>
 
 
 
-<a href="bot.html" class="category">
-
-<h2>🤖 SEWA BOT</h2>
-
-<p>
-WhatsApp Bot Service
-</p>
-
-</a>
+<div class="badges">
 
 
+<div class="badge">
 
-<a href="jasher.html" class="category">
+⚡ Fast Service
 
-<h2>🛠 JASHER</h2>
-
-<p>
-Jasa Server & Setup
-</p>
-
-</a>
+</div>
 
 
+<div class="badge">
 
-<a href="japush.html" class="category">
+🛡️ Trusted Quality
 
-<h2>🚀 JAPUSH</h2>
+</div>
 
-<p>
-Jasa Push & Promote
-</p>
 
-</a>
+<div class="badge">
+
+💳 Easy Payment
+
+</div>
+
+
+<div class="badge">
+
+🚀 Support
+
+</div>
 
 
 
 </div>
+
+
+
+
+
+<a href="#produk" class="btn">
+
+🛒 Mulai Belanja
+
+</a>
+
+
+
+
+<a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z"
+class="btn channel-btn">
+
+📢 Join Channel
+
+</a>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<h2 class="title">
+
+OUR SERVICES
+
+</h2>
+
+
+
+
+<div class="services">
+
+
+
+<div class="card">
+
+<h2>
+
+🖥 PANEL
+
+</h2>
+
+
+<p>
+
+Hosting server dengan performa stabil
+untuk berbagai kebutuhan digital.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+🤖 WHATSAPP BOT
+
+</h2>
+
+
+<p>
+
+Automasi WhatsApp untuk membantu
+aktivitas menjadi lebih mudah.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+🛠 JASHER
+
+</h2>
+
+
+<p>
+
+Layanan share WhatsApp untuk
+membantu penyebaran informasi.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+🚀 JAPUSH
+
+</h2>
+
+
+<p>
+
+Layanan push dan promosi
+untuk meningkatkan jangkauan.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 class="title" id="produk">
+
+OUR PRODUCTS
+
+</h2>
+
+
+
+
+<div class="products">
+
+
+
+
+
+<a href="panel.html" class="product">
+
+<h2>
+
+🖥 PANEL
+
+</h2>
+
+
+<p>
+
+Pterodactyl Hosting
+
+</p>
+
+
+</a>
+
+
+
+
+
+
+
+<a href="bot.html" class="product">
+
+<h2>
+
+🤖 SEWA BOT
+
+</h2>
+
+
+<p>
+
+WhatsApp Bot Service
+
+</p>
+
+
+</a>
+
+
+
+
+
+
+
+<a href="jasher.html" class="product">
+
+<h2>
+
+🛠 JASHER
+
+</h2>
+
+
+<p>
+
+Jasa Share WhatsApp
+
+</p>
+
+
+</a>
+
+
+
+
+
+
+
+<a href="japush.html" class="product">
+
+<h2>
+
+🚀 JAPUSH
+
+</h2>
+
+
+<p>
+
+Jasa Push & Promosi
+
+</p>
+
+
+</a>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 class="title">
+
+WHY AKIHIRO?
+
+</h2>
+
+
+
+
+<div class="choose">
+
+
+<span>✓</span> Pelayanan cepat dan responsif
+<br>
+
+
+<span>✓</span> Proses order mudah
+<br>
+
+
+<span>✓</span> Pembayaran aman menggunakan QRIS
+<br>
+
+
+<span>✓</span> Support melalui WhatsApp & Telegram
+<br>
+
+
+<span>✓</span> Solusi digital dalam satu tempat
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 class="title">
+
+CONTACT
+
+</h2>
 
 
 
@@ -258,25 +757,32 @@ Jasa Push & Promote
 <div class="contact">
 
 
-<a class="wa" href="https://wa.me/6285725269121">
+<a class="wa"
+href="https://wa.me/6285725269121">
 
-WhatsApp Owner
-
-</a>
-
-
-<a class="tg" href="https://t.me/akihiroid">
-
-Telegram Owner
+🟢 WhatsApp Owner
 
 </a>
 
 
-<a class="channel" href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
 
-Channel WhatsApp
+<a class="telegram"
+href="https://t.me/akihiroid">
+
+🔵 Telegram Owner
 
 </a>
+
+
+
+
+<a class="channel"
+href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
+
+🟣 WhatsApp Channel
+
+</a>
+
 
 
 
@@ -284,15 +790,38 @@ Channel WhatsApp
 
 
 
+
+
+
+
 <footer>
 
-AKIHIRO.CO © 2026
+
+<b>AKIHIRO.CO</b>
+
+<br>
+
+Your trusted partner in digital services.
+
+<br>
+
+Providing simple, fast, and reliable
+solutions for your online needs.
+
+<br><br>
+
+© 2026 AKIHIRO.CO
+
 
 </footer>
+
+
+
 
 
 </div>
 
 
 </body>
+
 </html>
