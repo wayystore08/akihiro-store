@@ -907,13 +907,9 @@ const panelRef = ref(db, "orders/panel");
 
 onValue(panelRef, (snapshot) => {
 
-    console.log("DATA FIREBASE:", snapshot.val());
-
-    document.getElementById("panel-order").innerHTML =
-    "🔥 " + snapshot.val() + " orang sudah order";
+    alert("DATA = " + snapshot.val());
 
 });
-
 
 </script>
     
