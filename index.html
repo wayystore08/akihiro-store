@@ -479,6 +479,134 @@ ORDER
 
 
 </div>
+  
+
+</div>
+
+    <!-- PAYMENT POPUP -->
+
+<div id="payment" class="popup">
+
+<div class="popup-box">
+
+<h2>PAYMENT</h2>
+
+<p id="product-name">
+Produk
+</p>
+
+
+<img src="qris.jpg" class="qris">
+
+
+<p>
+Silahkan scan QRIS<br>
+Setelah bayar kirim bukti
+</p>
+
+
+<a href="https://wa.me/6285725269121" 
+class="contact wa">
+
+WhatsApp Owner
+
+</a>
+
+
+<a href="https://t.me/akihiroid" 
+class="contact tg">
+
+Telegram Owner
+
+</a>
+
+
+<a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z" 
+class="contact channel">
+
+Channel WhatsApp
+
+</a>
+
+
+
+<button class="btn close" onclick="closePayment()">
+
+Tutup
+
+</button>
 
 
 </div>
+
+</div>
+
+
+
+
+<footer>
+
+AKIHIRO.CO © 2026
+
+</footer>
+
+
+
+</div>
+
+
+
+<script>
+
+
+function showProduct(id){
+
+
+let products=document.querySelectorAll('.products');
+
+
+products.forEach(function(item){
+
+item.style.display="none";
+
+});
+
+
+document.getElementById(id).style.display="block";
+
+
+}
+
+
+
+function payment(product){
+
+
+document.getElementById("payment").style.display="flex";
+
+
+document.getElementById("product-name").innerHTML=
+
+"Pembayaran : <b>"+product+"</b>";
+
+
+}
+
+
+
+function closePayment(){
+
+
+document.getElementById("payment").style.display="none";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
