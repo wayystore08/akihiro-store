@@ -13,9 +13,8 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial,sans-serif;
 }
-
 
 body{
 background:#050505;
@@ -32,6 +31,7 @@ padding:20px;
 
 .logo{
 width:80%;
+max-width:400px;
 display:block;
 margin:20px auto;
 filter:drop-shadow(0 0 20px red);
@@ -41,23 +41,27 @@ filter:drop-shadow(0 0 20px red);
 h1{
 text-align:center;
 color:red;
+font-size:32px;
 margin:20px;
+text-shadow:0 0 15px red;
 }
+
 
 
 .card{
 
 background:#111;
-border:1px solid #600;
+border:1px solid #700;
 border-radius:20px;
 padding:25px;
 margin:20px 0;
+box-shadow:0 0 15px #300;
 
 }
 
 
 .card h2{
-color:#ff2020;
+color:#ff3030;
 }
 
 
@@ -69,16 +73,47 @@ margin:15px 0;
 }
 
 
-button{
+.card p{
 
-background:red;
-color:white;
-border:0;
-padding:15px 30px;
-border-radius:30px;
+color:#aaa;
+line-height:25px;
 
 }
 
+
+
+.btn{
+
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:red;
+color:white;
+border:0;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+position:relative;
+z-index:10;
+
+}
+
+
+
+.back{
+
+display:block;
+text-align:center;
+margin:30px;
+color:red;
+text-decoration:none;
+
+}
+
+
+
+
+/* PAYMENT */
 
 .popup{
 
@@ -88,15 +123,19 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#000000dd;
+background:rgba(0,0,0,.9);
 align-items:center;
 justify-content:center;
+z-index:9999;
 
 }
 
 
+
 .popup-box{
 
+width:90%;
+max-width:400px;
 background:#111;
 border:2px solid red;
 border-radius:20px;
@@ -106,27 +145,63 @@ text-align:center;
 }
 
 
+
+.popup-box h2{
+
+color:red;
+
+}
+
+
+
 .qris{
 
 width:250px;
+margin:20px auto;
 
 }
+
+
+
+.contact{
+
+display:block;
+padding:15px;
+margin:10px 0;
+border-radius:30px;
+color:white;
+text-decoration:none;
+
+}
+
+
+
+.wa{
+background:#25D366;
+}
+
+
+
+.telegram{
+background:#0088cc;
+}
+
+
+
+.channel{
+background:#8000ff;
+}
+
 
 
 .close{
 
 background:#333;
-margin-top:15px;
-
-}
-
-
-.back{
-
-display:block;
-text-align:center;
-color:red;
-margin-top:30px;
+color:white;
+border:0;
+padding:12px 30px;
+border-radius:30px;
+margin-top:10px;
 
 }
 
@@ -151,75 +226,12 @@ margin-top:30px;
 
 
 
-<div class="card">
-
-<h2>
-Sewa 1 day
-</h2>
-
-
-<div class="price">
-Rp 1.000
-</div>
-
-
-<p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
-</p>
-
-
-<br>
-
-
-<button onclick="payment('Bot Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-
-  
-<div class="card">
-
-<h2>
-Sewa 7 day
-</h2>
-
-
-<div class="price">
-Rp 5.000
-</div>
-
-
-<p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
-</p>
-
-
-<br>
-
-
-<button onclick="payment('Bot Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
-  
-
 
 <div class="card">
 
+
 <h2>
-Sewa 5 day
+Bot Basic
 </h2>
 
 
@@ -229,16 +241,13 @@ Rp 10.000
 
 
 <p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
+✓ Online 24 Jam<br>
+✓ Auto Response<br>
+✓ Support Owner
 </p>
 
 
-<br>
-
-
-<button onclick="payment('Bot Basic')">
+<button class="btn" onclick="payment('Bot Basic')">
 
 ORDER
 
@@ -246,64 +255,33 @@ ORDER
 
 
 </div>
-  
-
-<div class="card">
-
-<h2>
-Sewa 20 day
-</h2>
 
 
-<div class="price">
-Rp 15.000
-</div>
 
-
-<p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
-</p>
-
-
-<br>
-
-
-<button onclick="payment('Bot Basic')">
-
-ORDER
-
-</button>
-
-
-</div>
 
 
 
 <div class="card">
 
+
 <h2>
-Sewa 30 day
+Bot Premium
 </h2>
 
 
 <div class="price">
-Rp 20.000
+Rp 25.000
 </div>
 
 
 <p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
+✓ Fitur Lengkap<br>
+✓ Server Stabil<br>
+✓ Priority Support
 </p>
 
 
-<br>
-
-
-<button onclick="payment('Bot Basic')">
+<button class="btn" onclick="payment('Bot Premium')">
 
 ORDER
 
@@ -311,39 +289,8 @@ ORDER
 
 
 </div>
-  
-  
-
-<div class="card">
 
 
-<h2>
-Bot PERMANENT
-</h2>
-
-
-<div class="price">
-Rp 35.000
-</div>
-
-  
-<p>
-Online 24/7 Jam<br>
-Auto Response<br>
-Support Owner
-</p>
-
-<br>
-
-
-<button onclick="payment('Bot Premium')">
-
-ORDER
-
-</button>
-
-
-</div>
 
 
 
@@ -354,18 +301,23 @@ ORDER
 </a>
 
 
+
 </div>
 
 
 
 
 
+<!-- PAYMENT -->
+
 <div class="popup" id="pay">
+
 
 <div class="popup-box">
 
+
 <h2>
-💳 PEMBAYARAN
+💳 PAYMENT
 </h2>
 
 
@@ -373,6 +325,7 @@ ORDER
 
 
 <img src="qris.png" class="qris">
+
 
 
 <p>
@@ -383,16 +336,9 @@ ke owner.
 
 
 
-<a href="https://wa.me/6285725269121"
-style="
-display:block;
-background:#25D366;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+
+<a class="contact wa"
+href="https://wa.me/6285725269121">
 
 🟢 WhatsApp Owner
 
@@ -401,16 +347,8 @@ text-decoration:none;
 
 
 
-<a href="https://t.me/akihiroid"
-style="
-display:block;
-background:#0088cc;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+<a class="contact telegram"
+href="https://t.me/akihiroid">
 
 🔵 Telegram Owner
 
@@ -419,16 +357,8 @@ text-decoration:none;
 
 
 
-<a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z"
-style="
-display:block;
-background:#8000ff;
-color:white;
-padding:15px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-">
+<a class="contact channel"
+href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
 
 🟣 Channel WhatsApp
 
@@ -449,12 +379,18 @@ Tutup
 </div>
 
 
-function payment(nama){
+
+
+<script>
+
+
+function payment(product){
 
 document.getElementById("pay").style.display="flex";
 
-document.getElementById("nama").innerHTML=
-"Order : "+nama;
+
+document.getElementById("nama").innerHTML =
+"Produk : <b>"+product+"</b>";
 
 }
 
@@ -468,6 +404,7 @@ document.getElementById("pay").style.display="none";
 
 
 </script>
+
 
 
 </body>
