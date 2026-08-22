@@ -659,7 +659,7 @@ OUR PRODUCTS
     </p>
 
     <span class="order-count">
-🔥 <span id="panel-order">Loading...</span> orang sudah order
+    <span id="panel-order">Loading...</span>
 </span>
 </a>
 
@@ -907,10 +907,10 @@ const panelRef = ref(db, "orders/panel");
 
 onValue(panelRef, (snapshot) => {
 
-    console.log(snapshot.val());
+    console.log("DATA FIREBASE:", snapshot.val());
 
     document.getElementById("panel-order").innerHTML =
-"🔥 " + snapshot.val() + " orang sudah order";
+    "🔥 " + snapshot.val() + " orang sudah order";
 
 });
 
