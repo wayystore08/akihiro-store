@@ -7,13 +7,14 @@
 
 <title>AKIHIRO JAPUSH</title>
 
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial,sans-serif;
 }
 
 
@@ -32,36 +33,44 @@ padding:20px;
 
 .logo{
 width:80%;
+max-width:400px;
 display:block;
 margin:20px auto;
 filter:drop-shadow(0 0 20px red);
 }
 
 
+
 h1{
 text-align:center;
 color:red;
+font-size:32px;
 margin:20px;
+text-shadow:0 0 15px red;
 }
+
 
 
 
 .card{
 
 background:#111;
-border:1px solid #600;
+border:1px solid #700;
 border-radius:20px;
 padding:25px;
 margin:20px 0;
+box-shadow:0 0 15px #300;
 
 }
+
 
 
 .card h2{
 
-color:#ff2020;
+color:#ff3030;
 
 }
+
 
 
 .price{
@@ -73,17 +82,48 @@ margin:15px 0;
 
 
 
-button{
+.card p{
 
-background:red;
-color:white;
-border:0;
-padding:15px 30px;
-border-radius:30px;
+color:#aaa;
+line-height:25px;
 
 }
 
 
+
+
+.btn{
+
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:red;
+color:white;
+border:0;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+position:relative;
+z-index:10;
+
+}
+
+
+
+.back{
+
+display:block;
+text-align:center;
+margin:30px;
+color:red;
+text-decoration:none;
+
+}
+
+
+
+
+/* PAYMENT */
 
 .popup{
 
@@ -93,9 +133,10 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#000000dd;
+background:rgba(0,0,0,.9);
 align-items:center;
 justify-content:center;
+z-index:9999;
 
 }
 
@@ -103,6 +144,8 @@ justify-content:center;
 
 .popup-box{
 
+width:90%;
+max-width:400px;
 background:#111;
 border:2px solid red;
 border-radius:20px;
@@ -113,33 +156,68 @@ text-align:center;
 
 
 
+.popup-box h2{
+
+color:red;
+
+}
+
+
+
 .qris{
 
 width:250px;
+margin:20px auto;
 
 }
+
+
+
+.contact{
+
+display:block;
+padding:15px;
+margin:10px 0;
+border-radius:30px;
+color:white;
+text-decoration:none;
+
+}
+
+
+
+.wa{
+background:#25D366;
+}
+
+
+
+.telegram{
+background:#0088cc;
+}
+
+
+
+.channel{
+background:#8000ff;
+}
+
 
 
 .close{
 
 background:#333;
-margin-top:15px;
-
-}
-
-
-
-.back{
-
-display:block;
-text-align:center;
-color:red;
-margin-top:30px;
+color:white;
+border:0;
+padding:12px 30px;
+border-radius:30px;
+margin-top:10px;
 
 }
 
 
 </style>
+
 
 </head>
 
@@ -160,6 +238,11 @@ margin-top:30px;
 </h1>
 
 
+<p style="text-align:center;color:#aaa;">
+Jasa Push & Promosi
+</p>
+
+
 
 
 
@@ -167,28 +250,26 @@ margin-top:30px;
 
 
 <h2>
-Push WhatsApp
+Push Basic
 </h2>
 
 
 <div class="price">
-
-Rp -
-
+Rp 5.000
 </div>
 
 
 <p>
-Promosi WhatsApp<br>
-Broadcast<br>
-Target Audience
+
+✓ Push WhatsApp<br>
+✓ Promosi produk<br>
+✓ Target sesuai kebutuhan
+
 </p>
 
 
-<br>
 
-
-<button onclick="payment('Push WhatsApp')">
+<button class="btn" onclick="payment('Push Basic')">
 
 ORDER
 
@@ -207,28 +288,26 @@ ORDER
 
 
 <h2>
-Push Telegram
+Push Premium
 </h2>
 
 
 <div class="price">
-
-Rp -
-
+Rp 15.000
 </div>
 
 
 <p>
-Promosi Channel<br>
-Increase Member<br>
-Custom Target
+
+✓ Push lebih banyak grup<br>
+✓ Prioritas pengerjaan<br>
+✓ Laporan selesai
+
 </p>
 
 
-<br>
 
-
-<button onclick="payment('Push Telegram')">
+<button class="btn" onclick="payment('Push Premium')">
 
 ORDER
 
@@ -241,31 +320,32 @@ ORDER
 
 
 
+
+
 <div class="card">
 
 
 <h2>
-Promote Channel
+Custom Push
 </h2>
 
 
 <div class="price">
-
 Rp -
-
 </div>
 
 
 <p>
-Promosi Produk<br>
-Campaign Support
+
+✓ Request target<br>
+✓ Request jumlah push<br>
+✓ Bisa diskusi
+
 </p>
 
 
-<br>
 
-
-<button onclick="payment('Promote Channel')">
+<button class="btn" onclick="payment('Custom Push')">
 
 ORDER
 
@@ -295,6 +375,9 @@ ORDER
 
 
 
+<!-- PAYMENT -->
+
+
 <div class="popup" id="pay">
 
 
@@ -302,17 +385,59 @@ ORDER
 
 
 <h2>
-Pembayaran
+💳 PAYMENT
 </h2>
+
 
 
 <p id="nama"></p>
 
 
+
+
 <img src="qris.png" class="qris">
 
 
-<br>
+
+
+<p>
+Setelah melakukan pembayaran,
+silahkan kirim bukti pembayaran
+ke owner.
+</p>
+
+
+
+
+<a class="contact wa"
+href="https://wa.me/6285725269121">
+
+🟢 WhatsApp Owner
+
+</a>
+
+
+
+
+<a class="contact telegram"
+href="https://t.me/akihiroid">
+
+🔵 Telegram Owner
+
+</a>
+
+
+
+
+<a class="contact channel"
+href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
+
+🟣 Channel WhatsApp
+
+</a>
+
+
+
 
 
 <button class="close" onclick="closePay()">
@@ -322,8 +447,8 @@ Tutup
 </button>
 
 
-</div>
 
+</div>
 
 </div>
 
@@ -336,17 +461,16 @@ Tutup
 <script>
 
 
-function payment(nama){
+function payment(product){
+
 
 document.getElementById("pay").style.display="flex";
 
 
-document.getElementById("nama").innerHTML=
-"Order : "+nama;
-
+document.getElementById("nama").innerHTML =
+"Produk : <b>"+product+"</b>";
 
 }
-
 
 
 
@@ -355,7 +479,6 @@ function closePay(){
 document.getElementById("pay").style.display="none";
 
 }
-
 
 
 </script>
