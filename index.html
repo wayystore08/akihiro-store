@@ -69,7 +69,27 @@ filter:drop-shadow(0 0 25px red);
     border-radius:25px;
     box-shadow:0 0 25px red;
 }
-    
+
+.dots{
+    text-align:center;
+    margin-top:10px;
+}
+
+
+.dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    background:#555;
+    border-radius:50%;
+    margin:5px;
+}
+
+
+.dot.active{
+    background:red;
+    box-shadow:0 0 10px red;
+}
 
 /* HERO */
 
@@ -458,21 +478,27 @@ font-size:32px;
 
 
 
-
 <div class="banner-slider">
 
 <div class="banner-track" id="bannerTrack">
 
 <img src="assets/banner/banner1.png">
-
 <img src="assets/banner/banner2.png">
-
 <img src="assets/banner/banner3.png">
 
 </div>
 
+
+<div class="dots">
+
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
 </div>
 
+
+</div>
 
 
 
