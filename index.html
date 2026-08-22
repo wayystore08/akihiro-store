@@ -206,32 +206,71 @@ gap:20px;
 
 
 
-.service-box{
+.services{
 
-text-align:center;
-padding:20px;
-border-radius:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 
 }
 
 
+.service-box{
 
-.service-box h2{
+background:
+linear-gradient(145deg,#151515,#300000);
 
-color:#ff3030;
+border:1px solid #700;
+
+border-radius:18px;
+
+padding:15px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+.service-box:hover{
+
+box-shadow:0 0 20px red;
+
+transform:translateY(-5px);
+
+}
+
+
+.service-box img{
+
+width:70px;
+
+height:70px;
+
+object-fit:contain;
+
 margin-bottom:10px;
 
 }
 
 
+.service-box h2{
 
-.service-box p{
+font-size:18px;
 
-color:#aaa;
-line-height:25px;
+color:white;
 
 }
 
+
+.service-box p{
+
+font-size:13px;
+
+color:#aaa;
+
+}
 
 
 
@@ -616,82 +655,96 @@ OUR SERVICES
 
 <div class="services">
 
+<div class="service-box">
+
+<img src="assets/product/panel.png">
+
+<h2>
+PANEL
+</h2>
+
+<p>
+Pterodactyl Hosting
+</p>
+
+</div>
 
 
 <div class="service-box">
 
+<img src="assets/product/bot.png">
+
 <h2>
-🖥 PANEL
+WHATSAPP BOT
 </h2>
 
 <p>
-Hosting server dengan performa stabil
-untuk berbagai kebutuhan digital.
+Bot WhatsApp Service
 </p>
 
-
 </div>
-
-
-
 
 
 <div class="service-box">
 
+<img src="assets/product/jasher.png">
+
 <h2>
-🤖 WHATSAPP BOT
+JASHER
 </h2>
 
 <p>
-Automasi WhatsApp untuk membantu
-aktivitas menjadi lebih mudah.
+Jasa Share WhatsApp
 </p>
 
-
 </div>
-
-
-
-
 
 
 <div class="service-box">
 
+<img src="assets/product/japush.png">
+
 <h2>
-🛠 JASHER
+JAPUSH
 </h2>
 
 <p>
-Layanan share WhatsApp untuk membantu
-penyebaran informasi.
+Jasa Push Promo
 </p>
 
-
 </div>
-
-
-
 
 
 <div class="service-box">
 
+<img src="assets/product/comingsoon.png">
+
 <h2>
-🚀 JAPUSH
+PPOB
 </h2>
 
 <p>
-Layanan push dan promosi untuk
-meningkatkan jangkauan.
+Coming Soon
 </p>
 
-
 </div>
 
 
+<div class="service-box">
 
+<img src="assets/product/comingsoon.png">
+
+<h2>
+VPS
+</h2>
+
+<p>
+Coming Soon
+</p>
 
 </div>
 
+</div>
 
 
 
