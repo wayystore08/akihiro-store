@@ -12,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -26,11 +26,8 @@ margin:auto;
 padding:20px;
 }
 
-
-/* LOGO */
-
 .logo{
-width:100%;
+width:90%;
 max-width:500px;
 display:block;
 margin:30px auto;
@@ -38,18 +35,16 @@ filter:drop-shadow(0 0 20px red);
 }
 
 
-/* HERO */
-
 .hero{
 text-align:center;
-padding:20px;
 }
 
 .hero h1{
+color:red;
 font-size:35px;
-color:#ff0000;
 text-shadow:0 0 15px red;
 }
+
 
 .hero p{
 color:#aaa;
@@ -58,143 +53,72 @@ margin-top:10px;
 
 
 
-/* CATEGORY */
-
 .title{
+
 text-align:center;
-font-size:28px;
 margin:40px 0 20px;
-color:#ff2020;
+color:red;
+font-size:28px;
+
 }
+
 
 
 .categories{
+
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
+
 }
+
 
 
 .category{
+
+display:block;
 background:#111;
-border:1px solid #500;
+border:1px solid #600;
 border-radius:20px;
-padding:25px;
+padding:30px;
 text-align:center;
-cursor:pointer;
+text-decoration:none;
+color:white;
 transition:.3s;
+
 }
+
 
 
 .category:hover{
+
 box-shadow:0 0 25px red;
 transform:translateY(-5px);
+
 }
 
 
+
 .category h2{
+
 color:red;
+
 }
 
 
 .category p{
+
 color:#aaa;
 margin-top:10px;
-}
-
-
-
-/* PRODUCT */
-
-.products{
-display:none;
-margin-top:30px;
-}
-
-
-.product{
-background:#111;
-border:1px solid #600;
-border-radius:20px;
-padding:20px;
-margin-bottom:20px;
-}
-
-
-.product h3{
-color:#ff3030;
-}
-
-
-.price{
-font-size:25px;
-margin:10px 0;
-}
-
-
-.btn{
-
-display:inline-block;
-padding:12px 25px;
-background:red;
-color:white;
-text-decoration:none;
-border-radius:30px;
-cursor:pointer;
 
 }
 
 
 
-/* POPUP */
+.contact{
 
-.popup{
-
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-align-items:center;
-justify-content:center;
-
-}
-
-
-.popup-box{
-
-background:#111;
-border:2px solid red;
-border-radius:20px;
-padding:30px;
+margin-top:40px;
 text-align:center;
-width:90%;
-max-width:400px;
-
-}
-
-
-.popup-box h2{
-
-color:red;
-
-}
-
-
-.qris{
-
-width:250px;
-margin:20px auto;
-
-}
-
-
-.close{
-
-background:#333;
-margin-top:10px;
 
 }
 
@@ -212,17 +136,23 @@ color:white;
 
 
 .wa{
+
 background:#25D366;
+
 }
 
 
 .tg{
+
 background:#0088cc;
+
 }
 
 
 .channel{
+
 background:#8000ff;
+
 }
 
 
@@ -236,17 +166,17 @@ margin:40px;
 }
 
 
-
 </style>
 
 </head>
 
-    <body>
+
+<body>
+
 
 <div class="container">
 
 
-<!-- LOGO -->
 <img src="logo.png" class="logo">
 
 
@@ -264,7 +194,7 @@ Fast • Secure • Trusted
 
 
 <h2 class="title">
-PILIH KATEGORI
+PILIH PRODUK
 </h2>
 
 
@@ -272,7 +202,7 @@ PILIH KATEGORI
 <div class="categories">
 
 
-<div class="category" onclick="showProduct('panel')">
+<a href="panel.html" class="category">
 
 <h2>🖥 PANEL</h2>
 
@@ -280,11 +210,11 @@ PILIH KATEGORI
 Pterodactyl Hosting
 </p>
 
-</div>
+</a>
 
 
 
-<div class="category" onclick="showProduct('bot')">
+<a href="bot.html" class="category">
 
 <h2>🤖 SEWA BOT</h2>
 
@@ -292,11 +222,11 @@ Pterodactyl Hosting
 WhatsApp Bot Service
 </p>
 
-</div>
+</a>
 
 
 
-<div class="category" onclick="showProduct('jasher')">
+<a href="jasher.html" class="category">
 
 <h2>🛠 JASHER</h2>
 
@@ -304,11 +234,11 @@ WhatsApp Bot Service
 Jasa Server & Setup
 </p>
 
-</div>
+</a>
 
 
 
-<div class="category" onclick="showProduct('japush')">
+<a href="japush.html" class="category">
 
 <h2>🚀 JAPUSH</h2>
 
@@ -316,70 +246,8 @@ Jasa Server & Setup
 Jasa Push & Promote
 </p>
 
-</div>
+</a>
 
-
-</div>
-
-
-
-
-
-<!-- =====================
- EDIT PRODUK DISINI
-===================== -->
-
-
-<div id="panel" class="products">
-
-<h2 class="title">
-PANEL LEGAL
-</h2>
-
-
-<div class="product">
-
-<h3>Panel Basic</h3>
-
-<div class="price">
-Rp 5.000
-</div>
-
-<p>
-RAM 1GB<br>
-Support 24 Jam
-</p>
-
-<br>
-
-<button class="btn" onclick="payment('Panel Basic')">
-ORDER
-</button>
-
-</div>
-
-
-
-<div class="product">
-
-<h3>Panel Premium</h3>
-
-<div class="price">
-Rp 15.000
-</div>
-
-<p>
-RAM Besar<br>
-Performance Tinggi
-</p>
-
-<br>
-
-<button class="btn" onclick="payment('Panel Premium')">
-ORDER
-</button>
-
-</div>
 
 
 </div>
@@ -387,142 +255,24 @@ ORDER
 
 
 
-<div id="bot" class="products">
-
-<h2 class="title">
-SEWA BOT
-</h2>
+<div class="contact">
 
 
-<div class="product">
-
-<h3>Bot Basic</h3>
-
-<div class="price">
-Rp 10.000
-</div>
-
-<p>
-Online 24 Jam
-</p>
-
-
-<button class="btn" onclick="payment('Sewa Bot Basic')">
-ORDER
-</button>
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div id="jasher" class="products">
-
-<h2 class="title">
-JASHER
-</h2>
-
-
-<div class="product">
-
-<h3>Setup Server</h3>
-
-<div class="price">
-Rp -
-</div>
-
-<p>
-Custom sesuai kebutuhan
-</p>
-
-
-<button class="btn" onclick="payment('Jasher')">
-ORDER
-</button>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div id="japush" class="products">
-
-<h2 class="title">
-JAPUSH
-</h2>
-
-
-<div class="product">
-
-<h3>Paket Push</h3>
-
-<div class="price">
-Rp -
-</div>
-
-<p>
-Promosi & Push
-</p>
-
-
-<button class="btn" onclick="payment('Japush')">
-ORDER
-</button>
-
-
-</div>
-  
-
-</div>
-
-    <!-- PAYMENT POPUP -->
-
-<div id="payment" class="popup">
-
-<div class="popup-box">
-
-<h2>PAYMENT</h2>
-
-<p id="product-name">
-Produk
-</p>
-
-
-<img src="qris.jpg" class="qris">
-
-
-<p>
-Silahkan scan QRIS<br>
-Setelah bayar kirim bukti
-</p>
-
-
-<a href="https://wa.me/6285725269121" 
-class="contact wa">
+<a class="wa" href="https://wa.me/6285725269121">
 
 WhatsApp Owner
 
 </a>
 
 
-<a href="https://t.me/akihiroid" 
-class="contact tg">
+<a class="tg" href="https://t.me/akihiroid">
 
 Telegram Owner
 
 </a>
 
 
-<a href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z" 
-class="contact channel">
+<a class="channel" href="https://whatsapp.com/channel/0029Vb88wYXD38CQfyQ35P2Z">
 
 Channel WhatsApp
 
@@ -530,17 +280,7 @@ Channel WhatsApp
 
 
 
-<button class="btn close" onclick="closePayment()">
-
-Tutup
-
-</button>
-
-
 </div>
-
-</div>
-
 
 
 
@@ -551,61 +291,8 @@ AKIHIRO.CO © 2026
 </footer>
 
 
-
 </div>
 
 
-
-<script>
-
-
-function showProduct(id){
-
-
-let products=document.querySelectorAll('.products');
-
-
-products.forEach(function(item){
-
-item.style.display="none";
-
-});
-
-
-document.getElementById(id).style.display="block";
-
-
-}
-
-    
-function payment(product){
-
-
-document.getElementById("payment").style.display="flex";
-
-
-document.getElementById("product-name").innerHTML=
-
-"Pembayaran : <b>"+product+"</b>";
-
-
-}
-
-
-
-function closePayment(){
-
-
-document.getElementById("payment").style.display="none";
-
-
-}
-
-
-
-</script>
-
-
 </body>
-
 </html>
