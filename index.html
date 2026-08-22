@@ -659,9 +659,9 @@ OUR PRODUCTS
     </p>
 
     <span class="order-count">
-        🔥 <span id="panelCount">134</span> orang sudah order
-    </span>
-
+        <span id="panel-order">
+Loading...
+        </span>
 </a>
 
 
@@ -903,6 +903,15 @@ appId: "1:522808539900:web:5a356da88007f2ee3ef579"
 const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
+
+const panelRef = ref(db, "orders/panel");
+
+onValue(panelRef, (snapshot) => {
+    const jumlah = snapshot.val();
+
+    document.getElementById("panel-order").innerHTML =
+    "🔥 " + jumlah + " orang sudah order";
+});    
 
 
 </script>
