@@ -687,6 +687,58 @@ font-size:13px;
 
 }
 
+/* NOTIFICATION */
+
+.notice{
+
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+
+background:#111;
+color:white;
+
+border:1px solid red;
+box-shadow:0 0 20px red;
+
+padding:15px 25px;
+
+border-radius:30px;
+
+font-size:15px;
+
+z-index:99999;
+
+animation:showHide 15s forwards;
+
+}
+
+
+@keyframes showHide{
+
+0%{
+opacity:0;
+top:0;
+}
+
+10%{
+opacity:1;
+top:20px;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+top:0;
+visibility:hidden;
+}
+
+}
+
 
 </style>
 
@@ -1136,7 +1188,20 @@ Hubungi Kami
 
 
 </footer>
-    
+<div class="notice">
+
+🔥 Promo AKIHIRO.CO
+<br>
+Sewa Panel Mulai Rp3.000
+
+</div>
+    <div class="notice">
+
+🔥 Promo AKIHIRO.CO
+<br>
+Panel unlimited Rp 12.000
+
+    </div>
 </body>
 
 
