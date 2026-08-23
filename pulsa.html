@@ -126,11 +126,11 @@ display:none;
 
 .provider{
 
-font-size:25px;
-
+font-size:24px;
+font-weight:bold;
 color:red;
-
-margin:15px;
+text-align:center;
+margin:20px 0;
 
 }
 
@@ -217,6 +217,38 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+
+.section-title{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+justify-content:center;
+
+color:red;
+
+font-size:22px;
+
+font-weight:bold;
+
+margin:25px 0;
+
+}
+
+
+.section-title span{
+
+height:2px;
+
+background:red;
+
+width:80px;
+
+}
+  
 
 
 </style>
@@ -383,7 +415,7 @@ document.getElementById("result").style.display="block";
 
 
 document.getElementById("providerName").innerHTML =
-"✅ "+provider;
+provider;
 
 
 
@@ -407,9 +439,15 @@ document.getElementById("productList").innerHTML =
 
 `
 
-<h3 style="color:red;margin-top:20px;">
-💰 PULSA TERSEDIA
-</h3>
+<div class="section-title">
+
+<span></span>
+
+PULSA TERSEDIA
+
+<span></span>
+
+</div>
 
 
 <div class="product-list">
@@ -473,9 +511,15 @@ document.getElementById("productList").innerHTML =
 
 `
 
-<h3 style="color:red;margin-top:20px;">
-🌐 KUOTA INTERNET TERSEDIA
-</h3>
+<div class="section-title">
+
+<span></span>
+
+KUOTA TERSEDIA
+
+<span></span>
+
+</div>
 
 
 <div class="product-list">
