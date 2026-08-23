@@ -740,6 +740,41 @@ visibility:hidden;
 }
 
 
+.activity-notif{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+background:#111;
+
+border:1px solid red;
+
+box-shadow:0 0 20px red;
+
+padding:15px 20px;
+
+border-radius:15px;
+
+color:white;
+
+font-size:14px;
+
+z-index:99999;
+
+display:none;
+
+}
+
+
+.activity-notif span{
+
+color:red;
+font-weight:bold;
+
+}
+
 </style>
 
 
@@ -1067,6 +1102,98 @@ dots[index].classList.add("active");
 
 },4000);
 
+    
+
+// ===============================
+// AKIHIRO LIVE ACTIVITY TEMPORARY
+// ===============================
+
+
+const buyerNames = [
+
+"Dimas store",
+"Raka project",
+"kamu siapa",
+"han",
+"self reward",
+"kecoa",
+"xavier panel",
+"rexy kyc",
+"andre sudah makan",
+"Kepin"
+
+];
+
+
+const buyerProducts = [
+
+"Panel RAM 7GB",
+"Panel RAM Unlimited",
+"WhatsApp Bot",
+"Jasa Push Member",
+"Jasher WhatsApp",
+"Panel RAM 10GB"
+
+];
+
+
+const buyerActions = [
+
+"telah membeli",
+"baru saja mendapatkan",
+"berhasil memilih"
+
+];
+
+
+
+
+function showActivity(){
+
+
+let name =
+buyerNames[Math.floor(Math.random()*buyerNames.length)];
+
+
+let product =
+buyerProducts[Math.floor(Math.random()*buyerProducts.length)];
+
+
+let action =
+buyerActions[Math.floor(Math.random()*buyerActions.length)];
+
+
+
+document.getElementById("activityText").innerHTML =
+
+"🔥 " + name + " " + action + " " + product;
+
+
+
+
+let notif =
+document.getElementById("activityNotif");
+
+
+notif.style.display="block";
+
+
+
+setTimeout(()=>{
+
+notif.style.display="none";
+
+},5000);
+
+
+}
+
+
+
+// muncul setiap 10 detik
+
+setInterval(showActivity,10000);
+    
 
 </script>
 
@@ -1202,6 +1329,21 @@ Sewa Panel Mulai Rp3.000
 Panel unlimited Rp 12.000
 
     </div>
+
+<div class="activity-notif" id="activityNotif">
+
+👀 <span id="activityName"></span>
+
+<br>
+
+sedang melihat
+
+<b id="activityProduct"></b>
+
+</div>
+
+
+
 </body>
 
 
