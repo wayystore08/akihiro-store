@@ -187,8 +187,24 @@ CEK NOMOR
 
 
 <p>
-Silahkan pilih produk
+Pilih layanan
 </p>
+
+
+<br>
+
+
+<button onclick="showPulsa()">
+💰 PULSA
+</button>
+
+
+<button onclick="showKuota()">
+🌐 KUOTA INTERNET
+</button>
+
+
+<div id="productList"></div>
 
 
 </div>
@@ -298,6 +314,59 @@ alert(
 
 }
 
+
+}
+
+
+function showPulsa(){
+
+document.getElementById("productList").innerHTML =
+
+`
+<h3 style="color:red;margin-top:20px;">
+PULSA TERSEDIA
+</h3>
+
+<p>
+Rp5.000
+</p>
+
+<p>
+Rp10.000
+</p>
+
+<p>
+Rp25.000
+</p>
+
+`;
+
+}
+
+
+
+function showKuota(){
+
+document.getElementById("productList").innerHTML =
+
+`
+<h3 style="color:red;margin-top:20px;">
+KUOTA INTERNET TERSEDIA
+</h3>
+
+<p>
+Internet 5GB
+</p>
+
+<p>
+Internet 10GB
+</p>
+
+<p>
+Internet 20GB
+</p>
+
+`;
 
 }
 
