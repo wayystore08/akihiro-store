@@ -203,15 +203,103 @@ Silahkan pilih produk
 
 <script>
 
+const providers = {
+
+"0811":"Telkomsel",
+"0812":"Telkomsel",
+"0813":"Telkomsel",
+"0821":"Telkomsel",
+"0822":"Telkomsel",
+"0851":"Telkomsel",
+"0852":"Telkomsel",
+"0853":"Telkomsel",
+
+"08515":"by.U",
+"08516":"by.U",
+"08517":"by.U",
+"08518":"by.U",
+"08519":"by.U",
+
+"0855":"Indosat",
+"0856":"Indosat",
+"0857":"Indosat",
+"0858":"Indosat",
+
+"0881":"Smartfren",
+"0882":"Smartfren",
+"0883":"Smartfren",
+
+"0895":"Tri",
+"0896":"Tri",
+"0897":"Tri",
+
+"0877":"XL",
+"0878":"XL",
+
+"0838":"Axis"
+
+};
+
+
 
 function checkProvider(){
 
 
-// nanti kita isi deteksi prefix
+let nomor = document.getElementById("phone").value;
+
+
+
+// hapus spasi
+nomor = nomor.replace(/\s/g,'');
+
+
+
+// cek format
+
+if(!nomor.startsWith("08")){
+
+alert("❌ Nomor harus diawali 08");
+
+return;
+
+}
+
+
+
+// ambil prefix
+
+let prefix5 = nomor.substring(0,5);
+let prefix4 = nomor.substring(0,4);
+
+
+
+let provider = providers[prefix5] || providers[prefix4];
+
+
+
+if(provider){
+
+
+document.getElementById("result").style.display="block";
+
+
+document.getElementById("providerName").innerHTML =
+"✅ "+provider;
+
+
+
+}else{
+
+
+alert(
+"❌ Provider tidak ditemukan"
+);
 
 
 }
 
+
+}
 
 
 </script>
