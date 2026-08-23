@@ -63,6 +63,24 @@ transform:translateX(-20px);
 transform:translateX(20px);
 }
 
+@keyframes slideIn{
+
+from{
+
+transform:translateX(50px);
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(0);
+opacity:1;
+
+}
+
+}
+    
 }
 
 
@@ -711,6 +729,33 @@ font-size:15px;
 z-index:99999;
 
 animation:showHide 15s forwards;
+    
+animation:slideIn .2s ease-out;
+
+}
+
+.buyer-notice{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+background:#111;
+
+border:1px solid red;
+
+box-shadow:0 0 20px red;
+
+padding:15px 20px;
+
+border-radius:15px;
+
+color:white;
+
+animation:slideIn .2s ease-out;
+
+z-index:99999;
 
 }
 
@@ -1111,44 +1156,31 @@ dots[index].classList.add("active");
 
 const buyerNames = [
 
-"Dimas store",
-"Raka project",
-"kamu siapa",
-"han",
-"self reward",
-"kecoa",
-"xavier panel",
-"rexy kyc",
-"andre sudah makan",
-"Kepin"
+"Dimas",
+"Raka",
+"Andi",
+"Fajar",
+"Rizky",
+"Bagas",
+"Yoga",
+"Kevin"
 
 ];
 
 
 const buyerProducts = [
 
+"Panel Unlimited",
 "Panel RAM 7GB",
-"Panel RAM Unlimited",
 "WhatsApp Bot",
 "Jasa Push Member",
-"Jasher WhatsApp",
-"Panel RAM 10GB"
-
-];
-
-
-const buyerActions = [
-
-"telah membeli",
-"baru saja mendapatkan",
-"berhasil memilih"
+"Jasher WhatsApp"
 
 ];
 
 
 
-
-function showActivity(){
+function showBuyer(){
 
 
 let name =
@@ -1159,29 +1191,30 @@ let product =
 buyerProducts[Math.floor(Math.random()*buyerProducts.length)];
 
 
-let action =
-buyerActions[Math.floor(Math.random()*buyerActions.length)];
+
+let notif = document.createElement("div");
+
+
+notif.className="buyer-notice";
 
 
 
-document.getElementById("activityText").innerHTML =
+notif.innerHTML =
 
-"🔥 " + name + " " + action + " " + product;
-
-
-
-
-let notif =
-document.getElementById("activityNotif");
+"🔥 <b>"+name+"</b><br>"+
+"telah membeli "+product;
 
 
-notif.style.display="block";
+
+document
+.getElementById("buyerContainer")
+.appendChild(notif);
 
 
 
 setTimeout(()=>{
 
-notif.style.display="none";
+notif.remove();
 
 },5000);
 
@@ -1192,7 +1225,7 @@ notif.style.display="none";
 
 // muncul setiap 10 detik
 
-setInterval(showActivity,10000);
+setInterval(showBuyer,10000);
     
 
 </script>
@@ -1342,7 +1375,7 @@ sedang melihat
 
 </div>
 
-
+<div id="buyerContainer"></div>
 
 </body>
 
