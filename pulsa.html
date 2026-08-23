@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKIHIRO PULSA</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+
+background:
+radial-gradient(circle at 10% 20%, rgba(255,0,0,.4),transparent 30%),
+#050505;
+
+color:white;
+
+}
+
+
+
+.container{
+
+max-width:700px;
+margin:auto;
+padding:20px;
+
+}
+
+
+
+.logo{
+
+width:250px;
+display:block;
+margin:30px auto;
+
+}
+
+
+
+h1{
+
+text-align:center;
+color:red;
+text-shadow:0 0 15px red;
+
+}
+
+
+
+.card{
+
+background:#111;
+
+border:1px solid #700;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+
+
+input{
+
+width:100%;
+
+padding:15px;
+
+border-radius:30px;
+
+border:none;
+
+margin:20px 0;
+
+font-size:16px;
+
+}
+
+
+
+button{
+
+padding:14px 30px;
+
+border-radius:30px;
+
+border:none;
+
+background:red;
+
+color:white;
+
+font-weight:bold;
+
+}
+
+
+
+#result{
+
+margin-top:25px;
+
+display:none;
+
+}
+
+
+
+.provider{
+
+font-size:25px;
+
+color:red;
+
+margin:15px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<img src="assets/logo.png" class="logo">
+
+
+
+<h1>
+📱 PULSA & KUOTA
+</h1>
+
+
+
+<div class="card">
+
+
+<p>
+Masukkan nomor HP kamu
+</p>
+
+
+<input 
+id="phone"
+placeholder="08xxxxxxxxxx"
+type="number">
+
+
+
+<button onclick="checkProvider()">
+
+CEK NOMOR
+
+</button>
+
+
+
+<div id="result">
+
+
+<div class="provider" id="providerName"></div>
+
+
+<p>
+Silahkan pilih produk
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+function checkProvider(){
+
+
+// nanti kita isi deteksi prefix
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
