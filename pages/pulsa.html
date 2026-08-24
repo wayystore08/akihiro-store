@@ -139,6 +139,9 @@ margin:20px 0;
 
 .product-list{
 
+
+
+  
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:10px;
@@ -192,6 +195,61 @@ font-weight:bold;
 color:#ff3030;
 
 }
+
+
+.payment-box{
+
+background:#111;
+
+border:1px solid red;
+
+border-radius:20px;
+
+padding:20px;
+
+margin-top:20px;
+
+text-align:center;
+
+box-shadow:0 0 20px rgba(255,0,0,.4);
+
+}
+
+
+.payment-box h2{
+
+color:red;
+margin-bottom:15px;
+
+}
+
+
+.payment-box p{
+
+margin:10px 0;
+
+}
+
+
+.pay-btn{
+
+margin-top:15px;
+
+background:red;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+border:none;
+
+font-weight:bold;
+
+}
+
+  
 
 .buy-btn{
 
@@ -458,6 +516,7 @@ Pilih layanan
 
 <div id="productList"></div>
 
+<div id="paymentBox" style="display:none;"></div>
 
 </div>
 
@@ -650,8 +709,7 @@ produk.forEach(item => {
 
 html += `
 
-<div class="product-card" onclick="beliPulsa('${item.kode}','${item.nama}',${item.modal})">
-
+<div class="product-card" onclick="detailPulsa('${item.kode}','${item.nama}',${item.modal})"
 <h3>
 ${item.nama}
 </h3>
@@ -671,6 +729,60 @@ html += `</div>`;
 
 
 document.getElementById("productList").innerHTML = html;
+
+}
+
+function detailPulsa(kode,nama,modal){
+
+let harga = modal + hitungMarkup(nama);
+
+
+let html = `
+
+<div class="payment-box">
+
+<h2>
+DETAIL PEMBELIAN
+</h2>
+
+
+<p>
+Produk:
+<br>
+<b>${nama}</b>
+</p>
+
+
+<p>
+Nomor:
+<br>
+<b>${document.getElementById("phone").value}</b>
+</p>
+
+
+<p>
+Harga:
+<br>
+<b>
+Rp ${harga.toLocaleString("id-ID")}
+</b>
+</p>
+
+
+<button class="pay-btn">
+BAYAR SEKARANG
+</button>
+
+
+</div>
+
+`;
+
+
+document.getElementById("paymentBox").innerHTML = html;
+
+document.getElementById("paymentBox").style.display="block";
+
 
 }
 
