@@ -858,7 +858,22 @@ Rp ${Number(harga).toLocaleString("id-ID")}
 
 
 
+let sedangProses = false;
+
+
 async function bayarPulsa(){
+
+
+if(sedangProses){
+return;
+}
+
+
+sedangProses = true;
+
+
+// matikan tombol bayar
+document.getElementById("bayarBtn").style.display="none";
 
 
 let trx = "TRX-" + Date.now();
@@ -868,7 +883,7 @@ document.getElementById("detailPulsa").innerHTML =
 
 `
 <h3>
-⏳ MEMPROSES
+⌛ MEMPROSES
 </h3>
 
 <br>
@@ -880,8 +895,14 @@ ID Transaksi :
 <br><br>
 
 Menghubungkan ke server...
-
 `;
+
+
+
+await kirimKeOKEConnect(trx);
+
+
+}
 
 
 
@@ -922,6 +943,8 @@ Pesanan sedang diproses...
 `;
 
 document.getElementById("bayarBtn").style.display="none";
+
+sedangProses = false;
 
 }
 
