@@ -858,10 +858,33 @@ Rp ${harga.toLocaleString("id-ID")}
 
 function bayarPulsa(){
 
-alert("Membuat invoice pembayaran...");
+let nomor = document.getElementById("phone").value;
+
+let produk = document.getElementById("detailPulsa").innerText;
+
+
+let trx = {
+
+id: "TRX-" + Date.now(),
+
+nomor: nomor,
+
+produk: produk,
+
+status: "pending"
+
+};
+
+
+console.log(trx);
+
+
+alert(
+"Invoice berhasil dibuat\n\nID: " + trx.id
+);
+
 
 }
-
 
 function closePay(){
 
