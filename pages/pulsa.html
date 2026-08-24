@@ -577,7 +577,7 @@ return;
 
 
 const data = await fetch("../data/pulsa.json")
-.then(res => res.json())
+.then(res => res.json());
   
 const produk = data;
 
@@ -617,9 +617,15 @@ Rp ${item.modal.toLocaleString("id-ID")}
 
 html += `</div>`;
 
-alert(produk.length);
 
 document.getElementById("productList").innerHTML = html;
+
+}
+
+
+function showKuota(){
+
+alert("Kuota belum siap");
 
 }
 
