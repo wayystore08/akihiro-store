@@ -597,10 +597,6 @@ Pilih layanan
 
 <div class="order-detail">
 
-<h3>
-🧾 DETAIL ORDER
-</h3>
-
 <p id="detailPulsa"></p>
 
 </div>
@@ -619,7 +615,7 @@ Tutup
 </div>
 
 </div>
-
+  
 <script>
 
 let selectedProvider = "";
@@ -850,38 +846,25 @@ Rp ${harga.toLocaleString("id-ID")}
 
 function bayarPulsa(){
 
-let nomor = document.getElementById("phone").value;
-
-let produk = document.getElementById("detailPulsa").innerText;
+alert("Silahkan lakukan pembayaran...");
 
 
-let trx = {
+// simulasi pembayaran sukses
+setTimeout(()=>{
 
-id: "TRX-" + Date.now(),
+pembayaranBerhasil();
 
-nomor: nomor,
-
-produk: produk,
-
-status: "pending"
-
-};
+},2000);
 
 
-console.log(trx);
+}
 
 
-// simpan transaksi
-localStorage.setItem(
-"trx",
-JSON.stringify(trx)
-);
+function pembayaranBerhasil(){
 
 
-// tutup detail order
-document.getElementById("pay").style.display="flex";
+let trx = "TRX-" + Date.now();
 
-// tampilkan invoice
 
 document.getElementById("detailPulsa").innerHTML =
 
@@ -894,29 +877,54 @@ document.getElementById("detailPulsa").innerHTML =
 
 ID Transaksi :
 <br>
-<b>${trx.id}</b>
+<b>${trx}</b>
+
 
 <br><br>
 
-Nomor :
-<br>
-<b>${trx.nomor}</b>
-
-<br><br>
-
-Produk :
-<br>
-<b>${trx.produk}</b>
-
-<br><br>
 
 Status :
 <br>
-<b>Menunggu Pembayaran</b>
+<b>Pembayaran Berhasil</b>
+
+
+<br><br>
+
+Pesanan sedang diproses...
 
 `;
 
 }
+
+async function kirimKeOKEConnect(trx){
+
+
+let data = {
+
+produk:"pulsa",
+
+nomor:
+document.getElementById("phone").value,
+
+
+trx_id:trx
+
+
+};
+
+
+console.log(
+"Kirim ke OKEConnect",
+data
+);
+
+
+// nanti diganti fetch API asli
+
+
+}
+
+
 
 function closePay(){
 
@@ -924,6 +932,7 @@ document.getElementById("pay").style.display="none";
 
 }
 
+  
 
 </script>
 
