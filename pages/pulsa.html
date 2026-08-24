@@ -544,7 +544,6 @@ let provider = providers[prefix5] || providers[prefix4];
 selectedProvider = provider;
 
 
-
 if(provider){
 
 
@@ -571,12 +570,22 @@ alert(
 
 async function showPulsa(){
 
+alert(selectedProvider);
+
+if(!selectedProvider){
+alert("Cek nomor dulu");
+return;
+}
+
+
 const data = await fetch("../data/pulsa.json")
 .then(res => res.json());
+
 
 const produk = data.filter(item =>
 item.provider === selectedProvider
 );
+
 
 let html = `
 
@@ -588,6 +597,7 @@ PULSA TERSEDIA
 
 <div class="product-list">
 `;
+
 
 produk.forEach(item => {
 
@@ -616,7 +626,6 @@ html += `</div>`;
 document.getElementById("productList").innerHTML = html;
 
 }
-
 
 
 
