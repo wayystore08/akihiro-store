@@ -602,7 +602,7 @@ Pilih layanan
 </div>
 
 
-<button class="pay-btn" onclick="bayarPulsa()">
+<button id="bayarBtn" class="pay-btn" onclick="bayarPulsa()">
 BAYAR SEKARANG
 </button>
 
@@ -893,6 +893,8 @@ Status :
 Pesanan sedang diproses...
 
 `;
+
+document.getElementById("bayarBtn").style.display="none";
 
 }
 
