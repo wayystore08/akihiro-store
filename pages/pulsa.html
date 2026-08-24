@@ -726,25 +726,42 @@ alert("Kuota belum siap");
 
 function detailPulsa(kode,nama,modal){
 
-alert("MASUK DETAIL");
+let box = document.getElementById("paymentBox");
 
-document.getElementById("paymentBox").innerHTML = `
+box.style.display = "block";
 
-<h2>
+box.innerHTML = `
+
+<div style="
+background:#111;
+border:1px solid red;
+border-radius:20px;
+padding:20px;
+margin-top:20px;
+text-align:center;
+">
+
+<h2 style="color:red;">
 DETAIL PEMBELIAN
 </h2>
 
 <p>
-${nama}
+Produk:
+<br>
+<b>${nama}</b>
 </p>
 
 <p>
-Rp ${modal}
+Harga:
+<br>
+<b>
+Rp ${modal.toLocaleString("id-ID")}
+</b>
 </p>
 
-`;
+</div>
 
-document.getElementById("paymentBox").style.display="block";
+`;
 
 }
 
