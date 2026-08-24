@@ -603,6 +603,41 @@ Pilih layanan
 
 </div>
 
+<div class="popup" id="paymentPage">
+
+<div class="popup-box">
+
+<h2>
+💳 PEMBAYARAN
+</h2>
+
+
+<div class="order-detail">
+
+<h3>
+🧾 INVOICE
+</h3>
+
+<p id="invoiceDetail"></p>
+
+
+</div>
+
+
+<button class="pay-btn">
+LANJUT PEMBAYARAN
+</button>
+
+
+<button class="close" onclick="closePaymentPage()">
+Tutup
+</button>
+
+
+</div>
+
+</div>
+
 
 <button class="pay-btn" onclick="bayarPulsa()">
 BAYAR SEKARANG
@@ -879,16 +914,62 @@ status: "pending"
 console.log(trx);
 
 
-alert(
-"Invoice berhasil dibuat\n\nID: " + trx.id
+// simpan transaksi
+localStorage.setItem(
+"trx",
+JSON.stringify(trx)
 );
 
+
+// tutup detail order
+document.getElementById("pay").style.display="none";
+
+
+// buka payment page
+document.getElementById("paymentPage").style.display="flex";
+
+
+// tampilkan invoice
+
+document.getElementById("invoiceDetail").innerHTML =
+
+`
+
+ID Transaksi :
+<br>
+<b>${trx.id}</b>
+
+<br><br>
+
+Nomor :
+<br>
+<b>${trx.nomor}</b>
+
+<br><br>
+
+Produk :
+<br>
+<b>${trx.produk}</b>
+
+<br><br>
+
+Status :
+<br>
+<b>Menunggu Pembayaran</b>
+
+`;
 
 }
 
 function closePay(){
 
 document.getElementById("pay").style.display="none";
+
+}
+
+function closePaymentPage(){
+
+document.getElementById("paymentPage").style.display="none";
 
 }
 
