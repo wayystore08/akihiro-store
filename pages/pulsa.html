@@ -609,10 +609,9 @@ BAYAR SEKARANG
 </button>
 
 
-<button class="close" onclick="document.getElementById('pay').style.display='none'">
+<button class="close" onclick="tutupPayment()">
 Tutup
 </button>
-
 
 </div>
 
@@ -904,6 +903,17 @@ Menghubungkan ke server...
 
 await kirimKeOKEConnect(trx);
 
+
+}
+
+
+function tutupPayment(){
+
+document.getElementById("pay").style.display="none";
+
+sedangProses = false;
+
+document.getElementById("bayarBtn").style.display="block";
 
 }
 
