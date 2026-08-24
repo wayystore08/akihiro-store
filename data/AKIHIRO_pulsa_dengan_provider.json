@@ -1,0 +1,434 @@
+[
+  {
+    "provider": "Telkomsel",
+    "kode": "TELKOMSEL-5000",
+    "nama": "TELKOMSEL REGULER 5.000",
+    "modal": 5333
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "TELKOMSEL-15000",
+    "nama": "TELKOMSEL REGULER 15.000",
+    "modal": 14805
+  },
+  {
+    "provider": "Axis",
+    "kode": "A5",
+    "nama": "Axis 5.000",
+    "modal": 5852
+  },
+  {
+    "provider": "Axis",
+    "kode": "A10",
+    "nama": "Axis 10.000",
+    "modal": 10852
+  },
+  {
+    "provider": "Axis",
+    "kode": "A15",
+    "nama": "Axis 15.000",
+    "modal": 15008
+  },
+  {
+    "provider": "Axis",
+    "kode": "A25",
+    "nama": "Axis 25.000",
+    "modal": 24990
+  },
+  {
+    "provider": "Axis",
+    "kode": "A30",
+    "nama": "Axis 30.000",
+    "modal": 30000
+  },
+  {
+    "provider": "Axis",
+    "kode": "A50",
+    "nama": "Axis 50.000",
+    "modal": 50000
+  },
+  {
+    "provider": "Axis",
+    "kode": "A100",
+    "nama": "Axis 100.000",
+    "modal": 99634
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU5",
+    "nama": "By U 5.000",
+    "modal": 5255
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU10",
+    "nama": "By U 10.000",
+    "modal": 10195
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU15",
+    "nama": "By U 15.000",
+    "modal": 14975
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU20",
+    "nama": "By U 20.000",
+    "modal": 19960
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU25",
+    "nama": "By U 25.000",
+    "modal": 24725
+  },
+  {
+    "provider": "Tri",
+    "kode": "BYU30",
+    "nama": "By U 30.000",
+    "modal": 29800
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU50",
+    "nama": "By U 50.000",
+    "modal": 49283
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU75",
+    "nama": "By U 75.000",
+    "modal": 73700
+  },
+  {
+    "provider": "by.U",
+    "kode": "BYU100",
+    "nama": "By U 100.000",
+    "modal": 97350
+  },
+  {
+    "provider": "Indosat",
+    "kode": "IA5",
+    "nama": "Isat Promo 5.000",
+    "modal": 6593
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I5",
+    "nama": "Indosat 5.000",
+    "modal": 6593
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I10",
+    "nama": "Indosat 10.000",
+    "modal": 11480
+  },
+  {
+    "provider": "Indosat",
+    "kode": "IA10",
+    "nama": "Isat Promo 10.000",
+    "modal": 11480
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I15",
+    "nama": "Indosat 15.000",
+    "modal": 15678
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I20",
+    "nama": "Indosat 20.000",
+    "modal": 20510
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I25",
+    "nama": "Indosat 25.000",
+    "modal": 25178
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I30",
+    "nama": "Indosat 30.000",
+    "modal": 30270
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I50",
+    "nama": "Indosat 50.000",
+    "modal": 48410
+  },
+  {
+    "provider": "Indosat",
+    "kode": "I100",
+    "nama": "Indosat 100.000",
+    "modal": 94069
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM5",
+    "nama": "Smartfren 5.000",
+    "modal": 5029
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM10",
+    "nama": "Smartfren 10.000",
+    "modal": 10024
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM15",
+    "nama": "Smartfren 15.000",
+    "modal": 15027
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM20",
+    "nama": "Smartfren 20.000",
+    "modal": 20026
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM25",
+    "nama": "Smartfren 25.000",
+    "modal": 25002
+  },
+  {
+    "provider": "Tri",
+    "kode": "SM30",
+    "nama": "Smartfren 30.000",
+    "modal": 30024
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM50",
+    "nama": "Smartfren 50.000",
+    "modal": 49997
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM75",
+    "nama": "Smartfren 75.000",
+    "modal": 75035
+  },
+  {
+    "provider": "Smartfren",
+    "kode": "SM100",
+    "nama": "Smartfren 100.000",
+    "modal": 99995
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "SP5",
+    "nama": "Telkomsel Promo 5.000",
+    "modal": 5204
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S5",
+    "nama": "Telkomsel 5.000",
+    "modal": 5230
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "SP10",
+    "nama": "Telkomsel Promo 10.000",
+    "modal": 10150
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S10",
+    "nama": "Telkomsel 10.000",
+    "modal": 10180
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S15",
+    "nama": "Telkomsel 15.000",
+    "modal": 14815
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "SP20",
+    "nama": "Telkomsel Promo 20.000",
+    "modal": 19820
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S20",
+    "nama": "Telkomsel 20.000",
+    "modal": 19821
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S25",
+    "nama": "Telkomsel 25.000",
+    "modal": 24641
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S30",
+    "nama": "Telkomsel 30.000",
+    "modal": 29495
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S50",
+    "nama": "Telkomsel 50.000",
+    "modal": 49248
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S75",
+    "nama": "Telkomsel 75.000",
+    "modal": 72880
+  },
+  {
+    "provider": "Telkomsel",
+    "kode": "S100",
+    "nama": "Telkomsel 100.000",
+    "modal": 96795
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T5",
+    "nama": "Three 5.000",
+    "modal": 5148
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T10",
+    "nama": "Three 10.000",
+    "modal": 10090
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T15",
+    "nama": "Three 15.000",
+    "modal": 14610
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T20",
+    "nama": "Three 20.000",
+    "modal": 19615
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T25",
+    "nama": "Three 25.000",
+    "modal": 24545
+  },
+  {
+    "provider": "Tri",
+    "kode": "T30",
+    "nama": "Three 30.000",
+    "modal": 29425
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T50",
+    "nama": "Three 50.000",
+    "modal": 47618
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T75",
+    "nama": "Three 75.000",
+    "modal": 72365
+  },
+  {
+    "provider": "Lainnya",
+    "kode": "T100",
+    "nama": "Three 100.000",
+    "modal": 92368
+  },
+  {
+    "provider": "XL",
+    "kode": "X5",
+    "nama": "XL 5.000",
+    "modal": 5852
+  },
+  {
+    "provider": "XL",
+    "kode": "X10",
+    "nama": "XL 10.000",
+    "modal": 10852
+  },
+  {
+    "provider": "XL",
+    "kode": "X15",
+    "nama": "XL 15.000",
+    "modal": 15008
+  },
+  {
+    "provider": "XL",
+    "kode": "X25",
+    "nama": "XL 25.000",
+    "modal": 24990
+  },
+  {
+    "provider": "XL",
+    "kode": "X30",
+    "nama": "XL 30.000",
+    "modal": 30000
+  },
+  {
+    "provider": "XL",
+    "kode": "X50",
+    "nama": "XL 50.000",
+    "modal": 50000
+  },
+  {
+    "provider": "XL",
+    "kode": "X100",
+    "nama": "XL 100.000",
+    "modal": 99634
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA5",
+    "nama": "XL - Axis 5.000",
+    "modal": 5852
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA10",
+    "nama": "XL - Axis 10.000",
+    "modal": 10852
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA15",
+    "nama": "XL - Axis 15.000",
+    "modal": 15008
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA25",
+    "nama": "XL - Axis 25.000",
+    "modal": 24993
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA30",
+    "nama": "XL - Axis 30.000",
+    "modal": 30005
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA50",
+    "nama": "XL - Axis 50.000",
+    "modal": 50008
+  },
+  {
+    "provider": "XL",
+    "kode": "XLA100",
+    "nama": "XL - Axis 100.000",
+    "modal": 99634
+  }
+]
