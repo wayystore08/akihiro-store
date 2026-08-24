@@ -197,6 +197,74 @@ color:#ff3030;
 }
 
 
+  .popup{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+align-items:center;
+justify-content:center;
+z-index:999;
+
+}
+
+
+.popup-box{
+
+width:90%;
+max-width:400px;
+background:#111;
+border:2px solid red;
+border-radius:20px;
+padding:25px;
+text-align:center;
+
+}
+
+
+.popup-box h2{
+
+color:red;
+margin-bottom:15px;
+
+}
+
+
+.order-detail{
+
+background:#080808;
+border:1px solid #700;
+border-radius:15px;
+padding:15px;
+margin:15px 0;
+
+}
+
+
+.order-detail p{
+
+font-size:17px;
+color:white;
+
+}
+
+
+.close{
+
+background:#333;
+color:white;
+border:0;
+padding:12px 30px;
+border-radius:30px;
+margin-top:10px;
+
+}
+
+
 .payment-box{
 
 background:#111;
@@ -516,7 +584,36 @@ Pilih layanan
 
 <div id="productList"></div>
 
-<div id="paymentBox"></div>
+<div class="popup" id="pay">
+
+<div class="popup-box">
+
+<h2>
+💳 PAYMENT
+</h2>
+
+
+<div class="order-detail">
+
+<h3>
+🧾 DETAIL ORDER
+</h3>
+
+
+<p id="detailPulsa"></p>
+
+
+</div>
+
+
+<button class="close" onclick="closePay()">
+Tutup
+</button>
+
+
+</div>
+
+</div>
 
 </div>
 
@@ -726,33 +823,36 @@ alert("Kuota belum siap");
 
 function detailPulsa(kode,nama,modal){
 
-let box = document.getElementById("paymentBox");
 
-box.innerHTML = `
+let harga = modal + hitungMarkup(nama);
 
-<div class="payment-box">
 
-<h2>
-DETAIL PEMBELIAN
-</h2>
+document.getElementById("pay").style.display="flex";
 
-<p>
-Produk:
-<br>
-<b>${nama}</b>
-</p>
 
-<p>
-Harga:
-<br>
+document.getElementById("detailPulsa").innerHTML =
+
+`
+Produk : <b>${nama}</b>
+<br><br>
+
+Nomor :
+<b>${document.getElementById("phone").value}</b>
+
+<br><br>
+
+Harga :
 <b>
-Rp ${modal.toLocaleString("id-ID")}
+Rp ${harga.toLocaleString("id-ID")}
 </b>
-</p>
-
-</div>
 
 `;
+
+}
+
+function closePay(){
+
+document.getElementById("pay").style.display="none";
 
 }
 
