@@ -599,12 +599,19 @@ Pilih layanan
 🧾 DETAIL ORDER
 </h3>
 
-
 <p id="detailPulsa"></p>
-
 
 </div>
 
+
+<button class="pay-btn" onclick="bayarPulsa()">
+BAYAR SEKARANG
+</button>
+
+
+<button class="close" onclick="closePay()">
+Tutup
+</button>
 
 <button class="close" onclick="closePay()">
 Tutup
@@ -851,14 +858,6 @@ Rp ${harga.toLocaleString("id-ID")}
 }
 
 
-<button class="pay-btn" onclick="bayarPulsa()">
-BAYAR SEKARANG
-</button>
-
-
-<button class="close" onclick="closePay()">
-Tutup
-</button>
 
 
 function bayarPulsa(){
