@@ -640,15 +640,14 @@ alert("Cek nomor dulu");
 return;
 }
 
+
 const data = await fetch("../data/pulsa.json")
 .then(res => res.json());
-  
-const produk = data.filter(item => 
+
+
+const produk = data.filter(item =>
 item.provider === selectedProvider
 );
-
-
-}
 
 
 let html = `
@@ -662,26 +661,6 @@ PULSA TERSEDIA
 <div class="product-list">
 `;
 
-
-function hitungMarkup(nama){
-
-let angka = parseInt(
-nama.match(/\d+/)[0]
-) * 1000;
-
-
-if(angka <= 20000){
-return 500;
-}
-
-if(angka <= 50000){
-return 1000;
-}
-
-return 1500;
-
-}
-  
 
 produk.forEach(item => {
 
@@ -709,53 +688,9 @@ html += `</div>`;
 
 document.getElementById("productList").innerHTML = html;
 
-}
-
-function detailPulsa(kode,nama,modal){
-
-let harga = modal + hitungMarkup(nama);
-
-let html = `
-
-<div class="payment-box">
-
-<h2>
-DETAIL PEMBELIAN
-</h2>
-
-<p>
-Produk:
-<br>
-<b>${nama}</b>
-</p>
-
-<p>
-Nomor:
-<br>
-<b>${document.getElementById("phone").value}</b>
-</p>
-
-<p>
-Harga:
-<br>
-<b>
-Rp ${harga.toLocaleString("id-ID")}
-</b>
-</p>
-
-<button class="pay-btn">
-BAYAR SEKARANG
-</button>
-
-</div>
-
-`;
-
-document.getElementById("paymentBox").innerHTML = html;
-
-document.getElementById("paymentBox").style.display="block";
 
 }
+
 
 
 
