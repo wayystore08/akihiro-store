@@ -970,6 +970,10 @@ refID: trx
 };
 
 
+alert("KODE PRODUK: " + selectedKode);
+console.log("DATA KIRIM:", data);
+
+
 let res = await fetch("https://akihiro-api.gt.tc/api/okeconnect.php",{
   
 method:"POST",
