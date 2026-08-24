@@ -516,7 +516,7 @@ Pilih layanan
 
 <div id="productList"></div>
 
-<div id="paymentBox" style="display:none;"></div>
+<div id="paymentBox"></div>
 
 </div>
 
@@ -728,20 +728,11 @@ function detailPulsa(kode,nama,modal){
 
 let box = document.getElementById("paymentBox");
 
-box.style.display = "block";
-
 box.innerHTML = `
 
-<div style="
-background:#111;
-border:1px solid red;
-border-radius:20px;
-padding:20px;
-margin-top:20px;
-text-align:center;
-">
+<div class="payment-box">
 
-<h2 style="color:red;">
+<h2>
 DETAIL PEMBELIAN
 </h2>
 
@@ -764,7 +755,6 @@ Rp ${modal.toLocaleString("id-ID")}
 `;
 
 }
-
 
 
 </script>
