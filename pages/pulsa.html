@@ -666,7 +666,7 @@ produk.forEach(item => {
 
 html += `
 
-<div class="product-card">
+<div class="product-card" onclick="detailPulsa('${item.kode}','${item.nama}',${item.modal})">
 
 <h3>
 ${item.nama}
@@ -724,11 +724,11 @@ alert("Kuota belum siap");
 }
 
 
+function detailPulsa(kode,nama,modal){
 
-
-function showKuota(){
-
-alert("Kuota belum siap");
+alert(
+"Produk dipilih: " + nama
+);
 
 }
 
