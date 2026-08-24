@@ -861,27 +861,31 @@ Rp ${Number(harga).toLocaleString("id-ID")}
 async function bayarPulsa(){
 
 
-alert("Silahkan lakukan pembayaran...");
-
-
-// buat ID transaksi
 let trx = "TRX-" + Date.now();
 
 
-// simulasi pembayaran sukses
-setTimeout(async ()=>{
+document.getElementById("detailPulsa").innerHTML =
+
+`
+<h3>
+⏳ MEMPROSES
+</h3>
+
+<br>
+
+ID Transaksi :
+<br>
+<b>${trx}</b>
+
+<br><br>
+
+Menghubungkan ke server...
+
+`;
 
 
-// kirim transaksi ke OKEConnect
+
 await kirimKeOKEConnect(trx);
-
-
-// tampilkan invoice
-pembayaranBerhasil(trx);
-
-
-},2000);
-
 
 
 }
