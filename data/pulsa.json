@@ -84,7 +84,7 @@
     "modal": 24725
   },
   {
-    "provider": "Tri",
+    "provider": "by.U",
     "kode": "BYU30",
     "nama": "By U 30.000",
     "modal": 29800
@@ -198,7 +198,7 @@
     "modal": 25002
   },
   {
-    "provider": "Tri",
+    "provider": "Smartfren",
     "kode": "SM30",
     "nama": "Smartfren 30.000",
     "modal": 30024
@@ -294,31 +294,31 @@
     "modal": 96795
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T5",
     "nama": "Three 5.000",
     "modal": 5148
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T10",
     "nama": "Three 10.000",
     "modal": 10090
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T15",
     "nama": "Three 15.000",
     "modal": 14610
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T20",
     "nama": "Three 20.000",
     "modal": 19615
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T25",
     "nama": "Three 25.000",
     "modal": 24545
@@ -330,19 +330,19 @@
     "modal": 29425
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T50",
     "nama": "Three 50.000",
     "modal": 47618
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T75",
     "nama": "Three 75.000",
     "modal": 72365
   },
   {
-    "provider": "Lainnya",
+    "provider": "Tri",
     "kode": "T100",
     "nama": "Three 100.000",
     "modal": 92368
