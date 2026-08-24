@@ -565,6 +565,51 @@ alert(
 
 }
 
+async function showPulsa(){
+
+const data = await fetch("../data/pulsa.json")
+.then(res => res.json());
+
+
+let html = `
+
+<div class="section-title">
+<span></span>
+PULSA TERSEDIA
+<span></span>
+</div>
+
+<div class="product-list">
+`;
+
+data.forEach(item => {
+
+html += `
+
+<div class="product-card">
+
+<h3>
+${item.nama}
+</h3>
+
+<div class="product-price">
+Rp ${item.modal.toLocaleString("id-ID")}
+</div>
+
+</div>
+
+`;
+
+});
+
+
+html += `</div>`;
+
+
+document.getElementById("productList").innerHTML = html;
+
+}
+
 
 
 
