@@ -578,10 +578,7 @@ return;
 
 const data = await fetch("../data/pulsa.json")
 .then(res => res.json())
-.catch(err => {
-alert("JSON ERROR");
-console.log(err);
-});
+  
 const produk = data;
 
 
@@ -620,6 +617,7 @@ Rp ${item.modal.toLocaleString("id-ID")}
 
 html += `</div>`;
 
+alert(produk.length);
 
 document.getElementById("productList").innerHTML = html;
 
