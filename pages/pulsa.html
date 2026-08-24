@@ -599,6 +599,24 @@ PULSA TERSEDIA
 `;
 
 
+function hitungMarkup(nama){
+
+let angka = parseInt(nama.match(/\d+/)[0]);
+
+if(angka <= 20000){
+return 500;
+}
+
+if(angka <= 50000){
+return 1000;
+}
+
+return 1500;
+
+}
+
+  
+
 produk.forEach(item => {
 
 html += `
@@ -610,7 +628,7 @@ ${item.nama}
 </h3>
 
 <div class="product-price">
-Rp ${item.modal.toLocaleString("id-ID")}
+Rp ${(item.modal + hitungMarkup(item.nama)).toLocaleString("id-ID")}
 </div>
 
 </div>
