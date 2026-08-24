@@ -607,7 +607,7 @@ BAYAR SEKARANG
 </button>
 
 
-<button class="close" onclick="closePay()">
+<button class="close" onclick="document.getElementById('pay').style.display='none'">
 Tutup
 </button>
 
@@ -756,7 +756,7 @@ produk.forEach(item => {
 
 html += `
 
-<div class="product-card" onclick="detailPulsa('${item.kode}','${item.nama}',${item.modal})">
+<div class="product-card" onclick="detailPulsa('${item.kode}','${item.nama}',${item.modal + hitungMarkup(item.nama)})">
 
 <h3>
 ${item.nama}
