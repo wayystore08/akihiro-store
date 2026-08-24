@@ -726,12 +726,58 @@ alert("Kuota belum siap");
 
 function detailPulsa(kode,nama,modal){
 
-alert(
-"Produk dipilih: " + nama
-);
+let harga = modal + hitungMarkup(nama);
+
+
+let html = `
+
+<div class="payment-box">
+
+<h2>
+DETAIL PEMBELIAN
+</h2>
+
+
+<p>
+Produk:
+<br>
+<b>${nama}</b>
+</p>
+
+
+<p>
+Nomor:
+<br>
+<b>${document.getElementById("phone").value}</b>
+</p>
+
+
+<p>
+Harga:
+<br>
+<b>
+Rp ${harga.toLocaleString("id-ID")}
+</b>
+</p>
+
+
+<button class="pay-btn">
+BAYAR SEKARANG
+</button>
+
+
+</div>
+
+`;
+
+
+document.getElementById("paymentBox").innerHTML = html;
+
+
+document.getElementById("paymentBox").style.display="block";
+
 
 }
-
 
 
 
