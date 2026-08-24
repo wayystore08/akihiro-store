@@ -989,7 +989,20 @@ let hasil = await res.text();
 console.log("RESPON OKECONNECT:", hasil);
 
 
-}
+document.getElementById("detailPulsa").innerHTML =
+
+`
+<h3>
+🧾 RESPON SERVER
+</h3>
+
+<br>
+
+${hasil}
+
+`;
+
+  
 </script>
 
 
