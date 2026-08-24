@@ -865,14 +865,14 @@ Rp ${Number(harga).toLocaleString("id-ID")}
 
 async function bayarPulsa(){
 
+console.log("KLIK BAYAR");
+console.log("STATUS:", sedangProses);
 
 if(sedangProses){
 return;
 }
 
-
 sedangProses = true;
-
 
 // matikan tombol bayar
 document.getElementById("bayarBtn").style.display="none";
