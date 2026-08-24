@@ -1,4 +1,6 @@
 {
- "markupPulsa":500,
- "markupKuota":1500
+  "markup": {
+    "pulsa": 500,
+    "kuota": 2000
+  }
 }
