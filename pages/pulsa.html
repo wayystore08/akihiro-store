@@ -582,9 +582,7 @@ const data = await fetch("../data/pulsa.json")
 .then(res => res.json());
 
 
-const produk = data.filter(item =>
-item.provider === selectedProvider
-);
+const produk = data;
 
 
 let html = `
