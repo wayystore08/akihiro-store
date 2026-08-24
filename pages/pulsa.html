@@ -467,6 +467,8 @@ Pilih layanan
 
 <script>
 
+let selectedProvider = "";
+
 const providers = {
 
 "0811":"Telkomsel",
@@ -538,6 +540,8 @@ let prefix4 = nomor.substring(0,4);
 
 
 let provider = providers[prefix5] || providers[prefix4];
+
+selectedProvider = provider;
 
 
 
