@@ -620,6 +620,8 @@ Tutup
 
 let selectedProvider = "";
 
+let selectedKode = "";
+
 const providers = {
 
 "0811":"Telkomsel",
@@ -754,8 +756,7 @@ produk.forEach(item => {
 
 html += `
 
-<div class="product-card" onclick="detailPulsa('${item.kode}','${item.nama}',${item.modal})">
-
+<div class="product-card" onclick="detailPulsa('${item.kode}','${item.keterangan}',${item.harga})"
 <h3>
 ${item.nama}
 </h3>
@@ -812,10 +813,14 @@ alert("Kuota belum siap");
 }
 
 
-function detailPulsa(kode,nama,modal){
+let selectedKode = "";
+let selectedHarga = "";
 
 
-let harga = modal + hitungMarkup(nama);
+function detailPulsa(kode,nama,harga){
+
+selectedKode = kode;
+selectedHarga = harga;
 
 
 document.getElementById("pay").style.display="flex";
@@ -824,7 +829,9 @@ document.getElementById("pay").style.display="flex";
 document.getElementById("detailPulsa").innerHTML =
 
 `
-Produk : <b>${nama}</b>
+Produk :
+<b>${nama}</b>
+
 <br><br>
 
 Nomor :
@@ -834,7 +841,7 @@ Nomor :
 
 Harga :
 <b>
-Rp ${harga.toLocaleString("id-ID")}
+Rp ${Number(harga).toLocaleString("id-ID")}
 </b>
 
 `;
@@ -843,28 +850,36 @@ Rp ${harga.toLocaleString("id-ID")}
 
 
 
+async function bayarPulsa(){
 
-function bayarPulsa(){
 
 alert("Silahkan lakukan pembayaran...");
 
 
-// simulasi pembayaran sukses
-setTimeout(()=>{
+// buat ID transaksi
+let trx = "TRX-" + Date.now();
 
-pembayaranBerhasil();
+
+// simulasi pembayaran sukses
+setTimeout(async ()=>{
+
+
+// kirim transaksi ke OKEConnect
+await kirimKeOKEConnect(trx);
+
+
+// tampilkan invoice
+pembayaranBerhasil(trx);
+
 
 },2000);
+
 
 
 }
 
 
-function pembayaranBerhasil(){
-
-
-let trx = "TRX-" + Date.now();
-
+function pembayaranBerhasil(trx){
 
 document.getElementById("detailPulsa").innerHTML =
 
@@ -903,37 +918,56 @@ async function kirimKeOKEConnect(trx){
 
 let data = {
 
-produk:"pulsa",
+kode_produk: selectedKode,
 
-nomor:
-document.getElementById("phone").value,
+nomor: document.getElementById("phone").value,
 
-
-trx_id:trx
-
+trx_id: trx
 
 };
 
 
+try{
+
+
+let response = await fetch("../api/transaksi.php",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify(data)
+
+});
+
+
+let hasil = await response.json();
+
+
 console.log(
-"Kirim ke OKEConnect",
-data
+"Respon OKEConnect",
+hasil
 );
 
 
-// nanti diganti fetch API asli
+return hasil;
+
+
+
+}catch(error){
+
+
+console.log(error);
+
+return false;
 
 
 }
 
 
-
-function closePay(){
-
-document.getElementById("pay").style.display="none";
-
 }
-
   
 
 </script>
