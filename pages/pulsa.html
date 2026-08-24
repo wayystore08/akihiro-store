@@ -577,9 +577,11 @@ return;
 
 
 const data = await fetch("../data/pulsa.json")
-.then(res => res.json());
-
-
+.then(res => res.json())
+.catch(err => {
+alert("JSON ERROR");
+console.log(err);
+});
 const produk = data;
 
 
