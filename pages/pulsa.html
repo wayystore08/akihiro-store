@@ -918,19 +918,16 @@ async function kirimKeOKEConnect(trx){
 
 let data = {
 
-kode_produk: selectedKode,
+product: selectedKode,
 
-nomor: document.getElementById("phone").value,
+dest: document.getElementById("phone").value,
 
-trx_id: trx
+refID: trx
 
 };
 
 
-try{
-
-
-let response = await fetch("../api/transaksi.php",{
+let res = await fetch("../api/okeconnect.php",{
 
 method:"POST",
 
@@ -943,33 +940,13 @@ body:JSON.stringify(data)
 });
 
 
-let hasil = await response.json();
+let hasil = await res.text();
 
 
-console.log(
-"Respon OKEConnect",
-hasil
-);
-
-
-return hasil;
-
-
-
-}catch(error){
-
-
-console.log(error);
-
-return false;
+console.log("RESPON OKECONNECT:", hasil);
 
 
 }
-
-
-}
-  
-
 </script>
 
 
