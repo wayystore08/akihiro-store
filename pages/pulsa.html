@@ -158,6 +158,8 @@ padding:10px;
 
 text-align:center;
 
+cursor:pointer;
+
 box-shadow:0 0 10px rgba(255,0,0,.3);
 
 min-height:80px;
@@ -586,6 +588,31 @@ const produk = data.filter(item =>
 item.provider === selectedProvider
 );
 
+function beliPulsa(kode,nama,modal){
+
+let harga = modal + hitungMarkup(nama);
+
+
+let pesan =
+`Halo AKIHIRO.CO
+
+Saya ingin membeli:
+
+Produk : ${nama}
+Nomor : ${document.getElementById("phone").value}
+Harga : Rp ${harga.toLocaleString("id-ID")}
+
+Mohon diproses.`;
+
+
+window.open(
+"https://wa.me/6285725269121?text="+encodeURIComponent(pesan),
+"_blank"
+);
+
+
+}
+
 
 let html = `
 
@@ -623,7 +650,7 @@ produk.forEach(item => {
 
 html += `
 
-<div class="product-card">
+<div class="product-card" onclick="beliPulsa('${item.kode}','${item.nama}',${item.modal})">
 
 <h3>
 ${item.nama}
