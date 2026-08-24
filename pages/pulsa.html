@@ -726,17 +726,13 @@ alert("Kuota belum siap");
 
 function detailPulsa(kode,nama,modal){
 
-let harga = modal + hitungMarkup(nama);
+document.getElementById("paymentBox").style.display="block";
 
+document.getElementById("paymentBox").innerHTML = `
 
-let html = `
+<div>
 
-<div class="payment-box">
-
-<h2>
-DETAIL PEMBELIAN
-</h2>
-
+<h2>DETAIL PEMBELIAN</h2>
 
 <p>
 Produk:
@@ -744,41 +740,17 @@ Produk:
 <b>${nama}</b>
 </p>
 
-
-<p>
-Nomor:
-<br>
-<b>${document.getElementById("phone").value}</b>
-</p>
-
-
 <p>
 Harga:
 <br>
-<b>
-Rp ${harga.toLocaleString("id-ID")}
-</b>
+<b>Rp ${modal}</b>
 </p>
-
-
-<button class="pay-btn">
-BAYAR SEKARANG
-</button>
-
 
 </div>
 
 `;
 
-
-document.getElementById("paymentBox").innerHTML = html;
-
-
-document.getElementById("paymentBox").style.display="block";
-
-
 }
-
 
 
 
