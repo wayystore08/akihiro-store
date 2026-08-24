@@ -548,6 +548,7 @@ selectedProvider = provider;
 
 if(provider){
 
+selectedProvider = provider;
 
 document.getElementById("result").style.display="block";
 
@@ -555,9 +556,12 @@ document.getElementById("result").style.display="block";
 document.getElementById("providerName").innerHTML =
 provider;
 
+
 showPulsa();
 
+
 }
+  
 
 }else{
 
@@ -574,7 +578,10 @@ alert(
 
 async function showPulsa(){
 
-
+if(!selectedProvider){
+alert("Cek nomor dulu");
+return;
+}
 
 const data = await fetch("../data/pulsa.json")
 .then(res => res.json());
