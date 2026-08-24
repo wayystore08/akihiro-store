@@ -601,7 +601,10 @@ PULSA TERSEDIA
 
 function hitungMarkup(nama){
 
-let angka = parseInt(nama.match(/\d+/)[0]);
+let angka = parseInt(
+nama.match(/\d+/)[0]
+) * 1000;
+
 
 if(angka <= 20000){
 return 500;
@@ -614,7 +617,6 @@ return 1000;
 return 1500;
 
 }
-
   
 
 produk.forEach(item => {
