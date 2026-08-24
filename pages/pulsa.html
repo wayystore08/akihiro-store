@@ -574,6 +574,9 @@ async function showPulsa(){
 const data = await fetch("../data/pulsa.json")
 .then(res => res.json());
 
+const produk = data.filter(item =>
+item.provider === selectedProvider
+);
 
 let html = `
 
@@ -586,7 +589,7 @@ PULSA TERSEDIA
 <div class="product-list">
 `;
 
-data.forEach(item => {
+produk.forEach(item => {
 
 html += `
 
