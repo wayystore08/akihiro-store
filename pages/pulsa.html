@@ -693,6 +693,39 @@ document.getElementById("productList").innerHTML = html;
 
 
 
+function hitungMarkup(nama){
+
+let angka = parseInt(
+nama.match(/\d+/)[0]
+) * 1000;
+
+
+if(angka <= 20000){
+return 500;
+}
+
+
+if(angka <= 50000){
+return 1000;
+}
+
+
+return 1500;
+
+}
+
+
+
+
+function showKuota(){
+
+alert("Kuota belum siap");
+
+}
+
+
+
+
 function showKuota(){
 
 alert("Kuota belum siap");
